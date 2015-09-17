@@ -5,6 +5,9 @@
  */
 package clases;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,8 +20,8 @@ public class NewClass {
      */
     public static void main(String[] args) {
        ListaBuses list = new ListaBuses();
-       int opcion=0,elemento;
-       do{
+       /**int opcion=0,elemento;
+       /**do{
            try{
                opcion = Integer.parseInt(JOptionPane.showInputDialog(null,"1. Agregar un nodo al inicio\n"
                              + "2.Agregar un nodo al Final\n" 
@@ -93,6 +96,56 @@ public class NewClass {
                JOptionPane.showMessageDialog(null, "Error" + n.getMessage());
            }  
         
-    }while(opcion!=7);
+    }while(opcion!=7);**/
+       int a[] = {5,6,3,44,19,4,100,56,22,1};
+       
+       for(int i = 0; i < a.length;i++){
+           list.burbuja(a);
+           list.agregarAlInicio(a[i]);
+       }
+      // list.mostrarlistafininicio();
+       
+       
+                   try {
+        
+      String dotPath = "dot.exe";
+       
+      String fileInputPath = list.codigograp();
+                       System.out.println(fileInputPath);
+      String fileOutputPath = "C:\\Users\\danielvega\\Desktop\\imag3.jpg";
+      String ruta = "C:\\Users\\danielvega\\Desktop\\archivo3.txt";
+        File archivo = new File(ruta);
+        BufferedWriter bw;
+        if(archivo.exists()) {
+            bw = new BufferedWriter(new FileWriter(archivo));
+            bw.write(fileInputPath);
+        } else {
+            bw = new BufferedWriter(new FileWriter(archivo));
+            bw.write(fileInputPath);
+        }
+        bw.close();
+        String archivoentra = "C:\\Users\\danielvega\\Desktop\\archivo3.txt";
+      
+                 
+      String tParam = "-Tjpg";
+      String tOParam = "-o";
+        
+      String[] cmd = new String[5];
+      cmd[0] = dotPath;
+      cmd[1] = tParam;
+      cmd[2] = archivoentra;
+      cmd[3] = tOParam;
+      cmd[4] = fileOutputPath;
+                  
+      Runtime rt = Runtime.getRuntime();
+      
+      rt.exec( cmd );
+      
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    } finally {
+    }
+       
 }
+       
 }

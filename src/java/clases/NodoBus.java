@@ -12,6 +12,7 @@ package clases;
 public class NodoBus {
     public int dato;
     NodoBus sig, ant;
+    private NodoBus riz;
 
     public NodoBus(int d) {
         this(d,null,null);
@@ -22,6 +23,22 @@ public class NodoBus {
     sig = s;
     ant = a;
     }
+
+    /**
+     * @return the riz
+     */
+    public NodoBus getRiz() {
+        return riz;
+    }
+
+    /**
+     * @param riz the riz to set
+     */
+    public void setRiz(NodoBus riz) {
+        this.riz = riz;
+    }
+    
+    
     
     
 }

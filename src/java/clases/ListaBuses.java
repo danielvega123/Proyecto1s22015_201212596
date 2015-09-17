@@ -12,10 +12,12 @@ import javax.swing.JOptionPane;
  * @author danielvega
  */
 public class ListaBuses {
-    private NodoBus inicio,fin;
+    public NodoBus inicio,fin;
+ int i,j,temporal,pasadas;
 
     public ListaBuses() {
         inicio = fin = null;    
+        i=j=temporal =0;
     }
     
     //metodo para saber si la lista esta vacia
@@ -62,7 +64,7 @@ public class ListaBuses {
               String datos = "<=>";
               NodoBus auxiliar = fin;
               while(auxiliar!=null){
-                  datos = datos + "(" + auxiliar.dato +")<=>";
+                  datos = datos + "(" + auxiliar.dato +")->";
                   auxiliar = auxiliar.ant;
                   JOptionPane.showMessageDialog(null, datos, "Mostrando lista de fin a inicio", JOptionPane.INFORMATION_MESSAGE);
               }
@@ -97,5 +99,51 @@ public class ListaBuses {
            
        }
       
-    
+      public void burbuja(int [] arreglo){
+        pasadas = 0;
+        for(i=0;i<arreglo.length;i++){
+            for(j=i+1;j<arreglo.length;j++){
+                if(arreglo[i]>arreglo[j]){
+                    temporal =arreglo[i];
+                    arreglo[i] = arreglo[j];
+                    arreglo[j] = temporal;
+                }
+                pasadas++;
+            }
+        }
+        System.out.println("termino en" + pasadas + "pasadas");
+        
+    }
+      String cuerpograpadmin = "digraph A {";
+
+    public String codigograp() {
+        
+            
+              NodoBus auxiliar = fin;
+              while(auxiliar!=null){
+                  if(auxiliar.ant !=null){
+                      cuerpograpadmin = cuerpograpadmin + auxiliar.dato +"->" + auxiliar.ant.dato+"\n";
+                        auxiliar = auxiliar.ant;
+                  }else{
+                      break;
+                  }
+                  
+                 // JOptionPane.showMessageDialog(null,  codigograp(), "Mostrando lista de fin a inicio", JOptionPane.INFORMATION_MESSAGE);
+              }
+              NodoBus aux2 = inicio;
+              while(aux2!=null){
+                  if(aux2.sig != null){
+                      cuerpograpadmin = cuerpograpadmin + aux2.dato +"->" + aux2.sig.dato+"\n";
+                      aux2 = aux2.sig;
+                  }else{
+                      break;
+                  }
+                  
+                 // JOptionPane.showMessageDialog(null,  codigograp(), "Mostrando lista de fin a inicio", JOptionPane.INFORMATION_MESSAGE);
+              }
+           
+
+        return cuerpograpadmin + "}";
+
+    }
 }

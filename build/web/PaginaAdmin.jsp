@@ -136,7 +136,7 @@ document.getElementById('datosruta').style.display ='none';
 
 //por el contrario, si no esta seleccionada
 }
-if (document.tipousu.tipo[5].checked === true) {
+if (d363) {
 //muestra (cambiando la propiedad display del estilo) el div con id 'desdeotro'
 document.getElementById('datosadmin').style.display='none';
 document.getElementById('datosestcla').style.display='none';
@@ -176,6 +176,7 @@ document.getElementById('datosruta').style.display ='block';
 					<h2>Opciones</h2>
                                         <form action="PaginaAdmin.jsp" method="POST" name = "option">
                                             <li><input type="radio" name="opcion" id = "opcion_0" onclick="mostrarformularios();" value="Crear">Crear</li>
+                                            <li><input type="radio" name="opcion" id = "opcion_0" onclick="mostrarformularios();" value="Crear">Crear</li> 
                                               	<li><input type="radio" name="opcion" id = "opcion_1" onclick="mostrarformularios();" value="Eliminar">ELiminar</li>
 						<li><input type="radio" name="opcion" id = "opcion_2" onclick="mostrarformularios();" value="Modificar">Modificar</li>
 					
@@ -193,7 +194,8 @@ document.getElementById('datosruta').style.display ='block';
                 <li><input type="radio" name="tipo" id = "tipo_3" onclick=" mostrarllenardatos();" value="Chof">Choferes</li>
                 <li><input type="radio" name="tipo" id = "tipo_4" onclick=" mostrarllenardatos();" value="Bus">Buses</li>
                 <li><input type="radio" name="tipo" id = "tipo_5" onclick=" mostrarllenardatos();" value="Rutas">Rutas</li>
-          </form>      
+          </form>
+
             </div>
             <div id="modificardatos" style="display:none;">
                 <p>Ingrese los datos</p>
@@ -202,6 +204,8 @@ document.getElementById('datosruta').style.display ='block';
            
 		<div style="clear:both">&nbsp;</div>
 	</div>
+            
+                               
          <div id="eliminardatos" style="display:none;">
                 <p>Ingrese el id para eliminar</p>
                 <label>id:<p><input type="text" name="txtideliminar" class="input" /></label></p>
@@ -245,14 +249,15 @@ document.getElementById('datosruta').style.display ='block';
                 <input type="submit" value="Aceptar" />
                 <div style="clear:both">&nbsp;</div>
 	</div>
-                                           <div id="datosbus" style="display:none;">
+        <div id="datosbus" style="display:none;" action="PaginaAdmin.jsp" method="POST">
               <p>Bus</p>
                 <p>Ingrese los datos</p>
                 <label>IdBus:<p><input type="text" name="txtidbus" class="input" /></label></p>
                 <input type="submit" value="Aceptar" />
                 <div style="clear:both">&nbsp;</div>
 	</div>
-                                           <div id="datosruta" style="display:none;">
+                                        
+        <div action="PaginaAdmin.jsp" method="POST" id="datosruta" style="display:none;">
               <p>Ruta</p>
                 <p>Ingrese los datos</p>
                 <label>Nombre de la Ruta:<p><input type="text" name="txtnombreruta" class="input" /></label></p>
@@ -265,5 +270,22 @@ document.getElementById('datosruta').style.display ='block';
      </div>
     
 </div>
+      <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructuras.Estructuras_Service service = new estructuras.Estructuras_Service();
+	estructuras.Estructuras port = service.getEstructurasPort();
+	 // TODO initialize WS operation arguments here
+	java.lang.Integer d = Integer.valueOf(request.getParameter("txtidibus"));
+	// TODO process result here
+	int result = port.insertar(d);
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>    
+  
+      
 </body>
 </html>
