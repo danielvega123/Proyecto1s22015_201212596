@@ -8,6 +8,10 @@
 
 <xs:element name="InsertarEst" type="tns:InsertarEst"/>
 
+<xs:element name="InsertarEstGen" type="tns:InsertarEstGen"/>
+
+<xs:element name="InsertarEstGenResponse" type="tns:InsertarEstGenResponse"/>
+
 <xs:element name="InsertarEstResponse" type="tns:InsertarEstResponse"/>
 
 <xs:element name="InsertarResponse" type="tns:InsertarResponse"/>
@@ -19,6 +23,10 @@
 <xs:element name="LoginEstacionclave" type="tns:LoginEstacionclave"/>
 
 <xs:element name="LoginEstacionclaveResponse" type="tns:LoginEstacionclaveResponse"/>
+
+<xs:element name="LoginEstaciongeneral" type="tns:LoginEstaciongeneral"/>
+
+<xs:element name="LoginEstaciongeneralResponse" type="tns:LoginEstaciongeneralResponse"/>
 
 <xs:element name="altura" type="tns:altura"/>
 
@@ -48,6 +56,10 @@
 
 <xs:element name="elimnar_avlResponse" type="tns:elimnar_avlResponse"/>
 
+<xs:element name="existeestacioncgeneral" type="tns:existeestacioncgeneral"/>
+
+<xs:element name="existeestacioncgeneralResponse" type="tns:existeestacioncgeneralResponse"/>
+
 <xs:element name="existeestacionclave" type="tns:existeestacionclave"/>
 
 <xs:element name="existeestacionclaveResponse" type="tns:existeestacionclaveResponse"/>
@@ -63,6 +75,10 @@
 <xs:element name="graficar" type="tns:graficar"/>
 
 <xs:element name="graficarEST" type="tns:graficarEST"/>
+
+<xs:element name="graficarESTGEN" type="tns:graficarESTGEN"/>
+
+<xs:element name="graficarESTGENResponse" type="tns:graficarESTGENResponse"/>
 
 <xs:element name="graficarESTResponse" type="tns:graficarESTResponse"/>
 
@@ -173,6 +189,18 @@
 <xs:complexType name="obtenerFEadminResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="existeestacioncgeneral">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="existeestacioncgeneralResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -330,18 +358,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="codigograp">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="codigograpResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="altura">
 <xs:sequence>
 <xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
@@ -351,6 +367,18 @@
 <xs:complexType name="alturaResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="codigograp">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="codigograpResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -367,6 +395,18 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="existeestacionclave">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="existeestacionclaveResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="rotacionizqadmin">
 <xs:sequence>
 <xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
@@ -379,16 +419,15 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="existeestacionclave">
+<xs:complexType name="balanciar">
 <xs:sequence>
-<xs:element name="id" type="xs:int"/>
+<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
+<xs:element name="arg1" type="tns:nodoArbolAVL" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="existeestacionclaveResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:boolean"/>
-</xs:sequence>
+<xs:complexType name="balanciarResponse">
+<xs:sequence/>
 </xs:complexType>
 
 <xs:complexType name="insertarAVL">
@@ -402,17 +441,6 @@
 <xs:sequence>
 <xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
 </xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="balanciar">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
-<xs:element name="arg1" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="balanciarResponse">
-<xs:sequence/>
 </xs:complexType>
 
 <xs:complexType name="hello">
@@ -460,6 +488,20 @@
 <xs:sequence/>
 </xs:complexType>
 
+<xs:complexType name="InsertarEstGen">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="c" type="xs:string" minOccurs="0"/>
+<xs:element name="c2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InsertarEstGenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="Inorden">
 <xs:sequence>
 <xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
@@ -504,6 +546,14 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="graficarESTGEN">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="graficarESTGENResponse">
+<xs:sequence/>
+</xs:complexType>
+
 <xs:complexType name="setRaiz1">
 <xs:sequence>
 <xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
@@ -537,16 +587,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="obtenerraizadmon">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="obtenerraizadmonResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:nodoadminitradorAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="comparar_parametros">
 <xs:sequence>
 <xs:element name="correo" type="xs:string" minOccurs="0"/>
@@ -557,6 +597,16 @@
 <xs:complexType name="comparar_parametrosResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerraizadmon">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="obtenerraizadmonResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nodoadminitradorAVL" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -587,6 +637,19 @@
 <xs:complexType name="rotacionizqResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginEstaciongeneral">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginEstaciongeneralResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 

@@ -27,147 +27,126 @@ public interface Estructuras {
 
     /**
      * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "setRaiz1", targetNamespace = "http://estructuras/", className = "estructuras.SetRaiz1")
-    @ResponseWrapper(localName = "setRaiz1Response", targetNamespace = "http://estructuras/", className = "estructuras.SetRaiz1Response")
-    @Action(input = "http://estructuras/Estructuras/setRaiz1Request", output = "http://estructuras/Estructuras/setRaiz1Response")
-    public void setRaiz1(
-        @WebParam(name = "arg0", targetNamespace = "")
-        NodoadminitradorAVL arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns int
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerFEadmin", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerFEadmin")
-    @ResponseWrapper(localName = "obtenerFEadminResponse", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerFEadminResponse")
-    @Action(input = "http://estructuras/Estructuras/obtenerFEadminRequest", output = "http://estructuras/Estructuras/obtenerFEadminResponse")
-    public int obtenerFEadmin(
-        @WebParam(name = "arg0", targetNamespace = "")
-        NodoadminitradorAVL arg0);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns estructuras.NodoadminitradorAVL
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "insertarAVL1", targetNamespace = "http://estructuras/", className = "estructuras.InsertarAVL1")
-    @ResponseWrapper(localName = "insertarAVL1Response", targetNamespace = "http://estructuras/", className = "estructuras.InsertarAVL1Response")
-    @Action(input = "http://estructuras/Estructuras/insertarAVL1Request", output = "http://estructuras/Estructuras/insertarAVL1Response")
-    public NodoadminitradorAVL insertarAVL1(
-        @WebParam(name = "arg0", targetNamespace = "")
-        NodoadminitradorAVL arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        NodoadminitradorAVL arg1);
-
-    /**
-     * 
-     * @return
-     *     returns estructuras.NodoadminitradorAVL
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getRaiz1", targetNamespace = "http://estructuras/", className = "estructuras.GetRaiz1")
-    @ResponseWrapper(localName = "getRaiz1Response", targetNamespace = "http://estructuras/", className = "estructuras.GetRaiz1Response")
-    @Action(input = "http://estructuras/Estructuras/getRaiz1Request", output = "http://estructuras/Estructuras/getRaiz1Response")
-    public NodoadminitradorAVL getRaiz1();
-
-    /**
-     * 
-     * @param arg0
+     * @param c
+     * @param id
+     * @param c2
      * @return
      *     returns java.lang.String
      */
-    @WebMethod
+    @WebMethod(operationName = "InsertarEst")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "codigograp", targetNamespace = "http://estructuras/", className = "estructuras.Codigograp")
-    @ResponseWrapper(localName = "codigograpResponse", targetNamespace = "http://estructuras/", className = "estructuras.CodigograpResponse")
-    @Action(input = "http://estructuras/Estructuras/codigograpRequest", output = "http://estructuras/Estructuras/codigograpResponse")
-    public String codigograp(
-        @WebParam(name = "arg0", targetNamespace = "")
-        NodoadminitradorAVL arg0);
+    @RequestWrapper(localName = "InsertarEst", targetNamespace = "http://estructuras/", className = "estructuras.InsertarEst")
+    @ResponseWrapper(localName = "InsertarEstResponse", targetNamespace = "http://estructuras/", className = "estructuras.InsertarEstResponse")
+    @Action(input = "http://estructuras/Estructuras/InsertarEstRequest", output = "http://estructuras/Estructuras/InsertarEstResponse")
+    public String insertarEst(
+        @WebParam(name = "id", targetNamespace = "")
+        int id,
+        @WebParam(name = "c", targetNamespace = "")
+        String c,
+        @WebParam(name = "c2", targetNamespace = "")
+        String c2);
 
     /**
      * 
+     * @param c
+     * @param c2
      * @return
-     *     returns estructuras.NodoadminitradorAVL
+     *     returns java.lang.String
      */
-    @WebMethod
+    @WebMethod(operationName = "Insertaradmin")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerraizadmon", targetNamespace = "http://estructuras/", className = "estructuras.Obtenerraizadmon")
-    @ResponseWrapper(localName = "obtenerraizadmonResponse", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerraizadmonResponse")
-    @Action(input = "http://estructuras/Estructuras/obtenerraizadmonRequest", output = "http://estructuras/Estructuras/obtenerraizadmonResponse")
-    public NodoadminitradorAVL obtenerraizadmon();
+    @RequestWrapper(localName = "Insertaradmin", targetNamespace = "http://estructuras/", className = "estructuras.Insertaradmin")
+    @ResponseWrapper(localName = "InsertaradminResponse", targetNamespace = "http://estructuras/", className = "estructuras.InsertaradminResponse")
+    @Action(input = "http://estructuras/Estructuras/InsertaradminRequest", output = "http://estructuras/Estructuras/InsertaradminResponse")
+    public String insertaradmin(
+        @WebParam(name = "c", targetNamespace = "")
+        String c,
+        @WebParam(name = "c2", targetNamespace = "")
+        String c2);
 
     /**
      * 
-     * @param arg0
+     * @param pass
+     * @param id
      * @return
-     *     returns estructuras.NodoadminitradorAVL
+     *     returns boolean
      */
-    @WebMethod
+    @WebMethod(operationName = "LoginEstacionclave")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "rotacionizqadmin", targetNamespace = "http://estructuras/", className = "estructuras.Rotacionizqadmin")
-    @ResponseWrapper(localName = "rotacionizqadminResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotacionizqadminResponse")
-    @Action(input = "http://estructuras/Estructuras/rotacionizqadminRequest", output = "http://estructuras/Estructuras/rotacionizqadminResponse")
-    public NodoadminitradorAVL rotacionizqadmin(
-        @WebParam(name = "arg0", targetNamespace = "")
-        NodoadminitradorAVL arg0);
+    @RequestWrapper(localName = "LoginEstacionclave", targetNamespace = "http://estructuras/", className = "estructuras.LoginEstacionclave")
+    @ResponseWrapper(localName = "LoginEstacionclaveResponse", targetNamespace = "http://estructuras/", className = "estructuras.LoginEstacionclaveResponse")
+    @Action(input = "http://estructuras/Estructuras/LoginEstacionclaveRequest", output = "http://estructuras/Estructuras/LoginEstacionclaveResponse")
+    public boolean loginEstacionclave(
+        @WebParam(name = "id", targetNamespace = "")
+        int id,
+        @WebParam(name = "pass", targetNamespace = "")
+        String pass);
 
     /**
      * 
-     * @param arg0
+     * @param c
+     * @param id
+     * @param c2
      * @return
-     *     returns estructuras.NodoadminitradorAVL
+     *     returns java.lang.String
      */
-    @WebMethod
+    @WebMethod(operationName = "InsertarEstGen")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "rotacionderadmin", targetNamespace = "http://estructuras/", className = "estructuras.Rotacionderadmin")
-    @ResponseWrapper(localName = "rotacionderadminResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotacionderadminResponse")
-    @Action(input = "http://estructuras/Estructuras/rotacionderadminRequest", output = "http://estructuras/Estructuras/rotacionderadminResponse")
-    public NodoadminitradorAVL rotacionderadmin(
-        @WebParam(name = "arg0", targetNamespace = "")
-        NodoadminitradorAVL arg0);
+    @RequestWrapper(localName = "InsertarEstGen", targetNamespace = "http://estructuras/", className = "estructuras.InsertarEstGen")
+    @ResponseWrapper(localName = "InsertarEstGenResponse", targetNamespace = "http://estructuras/", className = "estructuras.InsertarEstGenResponse")
+    @Action(input = "http://estructuras/Estructuras/InsertarEstGenRequest", output = "http://estructuras/Estructuras/InsertarEstGenResponse")
+    public String insertarEstGen(
+        @WebParam(name = "id", targetNamespace = "")
+        int id,
+        @WebParam(name = "c", targetNamespace = "")
+        String c,
+        @WebParam(name = "c2", targetNamespace = "")
+        String c2);
 
     /**
      * 
-     * @param arg0
-     * @return
-     *     returns estructuras.NodoadminitradorAVL
      */
     @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "rotaciondoblederadmin", targetNamespace = "http://estructuras/", className = "estructuras.Rotaciondoblederadmin")
-    @ResponseWrapper(localName = "rotaciondoblederadminResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotaciondoblederadminResponse")
-    @Action(input = "http://estructuras/Estructuras/rotaciondoblederadminRequest", output = "http://estructuras/Estructuras/rotaciondoblederadminResponse")
-    public NodoadminitradorAVL rotaciondoblederadmin(
-        @WebParam(name = "arg0", targetNamespace = "")
-        NodoadminitradorAVL arg0);
+    @RequestWrapper(localName = "graficarESTGEN", targetNamespace = "http://estructuras/", className = "estructuras.GraficarESTGEN")
+    @ResponseWrapper(localName = "graficarESTGENResponse", targetNamespace = "http://estructuras/", className = "estructuras.GraficarESTGENResponse")
+    @Action(input = "http://estructuras/Estructuras/graficarESTGENRequest", output = "http://estructuras/Estructuras/graficarESTGENResponse")
+    public void graficarESTGEN();
 
     /**
      * 
-     * @param arg0
+     * @param pass
+     * @param id
      * @return
-     *     returns estructuras.NodoadminitradorAVL
+     *     returns boolean
      */
-    @WebMethod
+    @WebMethod(operationName = "LoginEstaciongeneral")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "rotaciondobleizqadmin", targetNamespace = "http://estructuras/", className = "estructuras.Rotaciondobleizqadmin")
-    @ResponseWrapper(localName = "rotaciondobleizqadminResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotaciondobleizqadminResponse")
-    @Action(input = "http://estructuras/Estructuras/rotaciondobleizqadminRequest", output = "http://estructuras/Estructuras/rotaciondobleizqadminResponse")
-    public NodoadminitradorAVL rotaciondobleizqadmin(
-        @WebParam(name = "arg0", targetNamespace = "")
-        NodoadminitradorAVL arg0);
+    @RequestWrapper(localName = "LoginEstaciongeneral", targetNamespace = "http://estructuras/", className = "estructuras.LoginEstaciongeneral")
+    @ResponseWrapper(localName = "LoginEstaciongeneralResponse", targetNamespace = "http://estructuras/", className = "estructuras.LoginEstaciongeneralResponse")
+    @Action(input = "http://estructuras/Estructuras/LoginEstaciongeneralRequest", output = "http://estructuras/Estructuras/LoginEstaciongeneralResponse")
+    public boolean loginEstaciongeneral(
+        @WebParam(name = "id", targetNamespace = "")
+        int id,
+        @WebParam(name = "pass", targetNamespace = "")
+        String pass);
+
+    /**
+     * 
+     * @param pass
+     * @param correo
+     * @return
+     *     returns boolean
+     */
+    @WebMethod(operationName = "comparar_parametros")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "comparar_parametros", targetNamespace = "http://estructuras/", className = "estructuras.CompararParametros")
+    @ResponseWrapper(localName = "comparar_parametrosResponse", targetNamespace = "http://estructuras/", className = "estructuras.CompararParametrosResponse")
+    @Action(input = "http://estructuras/Estructuras/comparar_parametrosRequest", output = "http://estructuras/Estructuras/comparar_parametrosResponse")
+    public boolean compararParametros(
+        @WebParam(name = "correo", targetNamespace = "")
+        String correo,
+        @WebParam(name = "pass", targetNamespace = "")
+        String pass);
 
     /**
      * 
@@ -195,105 +174,6 @@ public interface Estructuras {
     @ResponseWrapper(localName = "todoasadminResponse", targetNamespace = "http://estructuras/", className = "estructuras.TodoasadminResponse")
     @Action(input = "http://estructuras/Estructuras/todoasadminRequest", output = "http://estructuras/Estructuras/todoasadminResponse")
     public List<Object> todoasadmin();
-
-    /**
-     * 
-     */
-    @WebMethod
-    @RequestWrapper(localName = "graficarEST", targetNamespace = "http://estructuras/", className = "estructuras.GraficarEST")
-    @ResponseWrapper(localName = "graficarESTResponse", targetNamespace = "http://estructuras/", className = "estructuras.GraficarESTResponse")
-    @Action(input = "http://estructuras/Estructuras/graficarESTRequest", output = "http://estructuras/Estructuras/graficarESTResponse")
-    public void graficarEST();
-
-    /**
-     * 
-     */
-    @WebMethod
-    @RequestWrapper(localName = "graficarcompleta", targetNamespace = "http://estructuras/", className = "estructuras.Graficarcompleta")
-    @ResponseWrapper(localName = "graficarcompletaResponse", targetNamespace = "http://estructuras/", className = "estructuras.GraficarcompletaResponse")
-    @Action(input = "http://estructuras/Estructuras/graficarcompletaRequest", output = "http://estructuras/Estructuras/graficarcompletaResponse")
-    public void graficarcompleta();
-
-    /**
-     * 
-     */
-    @WebMethod
-    @RequestWrapper(localName = "graficar", targetNamespace = "http://estructuras/", className = "estructuras.Graficar")
-    @ResponseWrapper(localName = "graficarResponse", targetNamespace = "http://estructuras/", className = "estructuras.GraficarResponse")
-    @Action(input = "http://estructuras/Estructuras/graficarRequest", output = "http://estructuras/Estructuras/graficarResponse")
-    public void graficar();
-
-    /**
-     * 
-     * @param c
-     * @param c2
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod(operationName = "Insertaradmin")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Insertaradmin", targetNamespace = "http://estructuras/", className = "estructuras.Insertaradmin")
-    @ResponseWrapper(localName = "InsertaradminResponse", targetNamespace = "http://estructuras/", className = "estructuras.InsertaradminResponse")
-    @Action(input = "http://estructuras/Estructuras/InsertaradminRequest", output = "http://estructuras/Estructuras/InsertaradminResponse")
-    public String insertaradmin(
-        @WebParam(name = "c", targetNamespace = "")
-        String c,
-        @WebParam(name = "c2", targetNamespace = "")
-        String c2);
-
-    /**
-     * 
-     * @param pass
-     * @param correo
-     * @return
-     *     returns boolean
-     */
-    @WebMethod(operationName = "comparar_parametros")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "comparar_parametros", targetNamespace = "http://estructuras/", className = "estructuras.CompararParametros")
-    @ResponseWrapper(localName = "comparar_parametrosResponse", targetNamespace = "http://estructuras/", className = "estructuras.CompararParametrosResponse")
-    @Action(input = "http://estructuras/Estructuras/comparar_parametrosRequest", output = "http://estructuras/Estructuras/comparar_parametrosResponse")
-    public boolean compararParametros(
-        @WebParam(name = "correo", targetNamespace = "")
-        String correo,
-        @WebParam(name = "pass", targetNamespace = "")
-        String pass);
-
-    /**
-     * 
-     * @param c
-     * @param id
-     * @param c2
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod(operationName = "InsertarEst")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "InsertarEst", targetNamespace = "http://estructuras/", className = "estructuras.InsertarEst")
-    @ResponseWrapper(localName = "InsertarEstResponse", targetNamespace = "http://estructuras/", className = "estructuras.InsertarEstResponse")
-    @Action(input = "http://estructuras/Estructuras/InsertarEstRequest", output = "http://estructuras/Estructuras/InsertarEstResponse")
-    public String insertarEst(
-        @WebParam(name = "id", targetNamespace = "")
-        int id,
-        @WebParam(name = "c", targetNamespace = "")
-        String c,
-        @WebParam(name = "c2", targetNamespace = "")
-        String c2);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns estructuras.NodoArbolAVL
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenernuevonodo", targetNamespace = "http://estructuras/", className = "estructuras.Obtenernuevonodo")
-    @ResponseWrapper(localName = "obtenernuevonodoResponse", targetNamespace = "http://estructuras/", className = "estructuras.ObtenernuevonodoResponse")
-    @Action(input = "http://estructuras/Estructuras/obtenernuevonodoRequest", output = "http://estructuras/Estructuras/obtenernuevonodoResponse")
-    public NodoArbolAVL obtenernuevonodo(
-        @WebParam(name = "arg0", targetNamespace = "")
-        NodoArbolAVL arg0);
 
     /**
      * 
@@ -345,6 +225,21 @@ public interface Estructuras {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenernuevonodo", targetNamespace = "http://estructuras/", className = "estructuras.Obtenernuevonodo")
+    @ResponseWrapper(localName = "obtenernuevonodoResponse", targetNamespace = "http://estructuras/", className = "estructuras.ObtenernuevonodoResponse")
+    @Action(input = "http://estructuras/Estructuras/obtenernuevonodoRequest", output = "http://estructuras/Estructuras/obtenernuevonodoResponse")
+    public NodoArbolAVL obtenernuevonodo(
+        @WebParam(name = "arg0", targetNamespace = "")
+        NodoArbolAVL arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns estructuras.NodoArbolAVL
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "rotacionder", targetNamespace = "http://estructuras/", className = "estructuras.Rotacionder")
     @ResponseWrapper(localName = "rotacionderResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotacionderResponse")
     @Action(input = "http://estructuras/Estructuras/rotacionderRequest", output = "http://estructuras/Estructuras/rotacionderResponse")
@@ -384,6 +279,15 @@ public interface Estructuras {
 
     /**
      * 
+     */
+    @WebMethod
+    @RequestWrapper(localName = "graficarEST", targetNamespace = "http://estructuras/", className = "estructuras.GraficarEST")
+    @ResponseWrapper(localName = "graficarESTResponse", targetNamespace = "http://estructuras/", className = "estructuras.GraficarESTResponse")
+    @Action(input = "http://estructuras/Estructuras/graficarESTRequest", output = "http://estructuras/Estructuras/graficarESTResponse")
+    public void graficarEST();
+
+    /**
+     * 
      * @param arg0
      */
     @WebMethod
@@ -402,12 +306,24 @@ public interface Estructuras {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "rotaciondobleizq", targetNamespace = "http://estructuras/", className = "estructuras.Rotaciondobleizq")
-    @ResponseWrapper(localName = "rotaciondobleizqResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotaciondobleizqResponse")
-    @Action(input = "http://estructuras/Estructuras/rotaciondobleizqRequest", output = "http://estructuras/Estructuras/rotaciondobleizqResponse")
-    public NodoArbolAVL rotaciondobleizq(
+    @RequestWrapper(localName = "rotacionizq", targetNamespace = "http://estructuras/", className = "estructuras.Rotacionizq")
+    @ResponseWrapper(localName = "rotacionizqResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotacionizqResponse")
+    @Action(input = "http://estructuras/Estructuras/rotacionizqRequest", output = "http://estructuras/Estructuras/rotacionizqResponse")
+    public NodoArbolAVL rotacionizq(
         @WebParam(name = "arg0", targetNamespace = "")
         NodoArbolAVL arg0);
+
+    /**
+     * 
+     * @return
+     *     returns estructuras.NodoadminitradorAVL
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getRaiz1", targetNamespace = "http://estructuras/", className = "estructuras.GetRaiz1")
+    @ResponseWrapper(localName = "getRaiz1Response", targetNamespace = "http://estructuras/", className = "estructuras.GetRaiz1Response")
+    @Action(input = "http://estructuras/Estructuras/getRaiz1Request", output = "http://estructuras/Estructuras/getRaiz1Response")
+    public NodoadminitradorAVL getRaiz1();
 
     /**
      * 
@@ -420,6 +336,129 @@ public interface Estructuras {
     public void preorden(
         @WebParam(name = "arg0", targetNamespace = "")
         NodoArbolAVL arg0);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "balanciar", targetNamespace = "http://estructuras/", className = "estructuras.Balanciar")
+    @ResponseWrapper(localName = "balanciarResponse", targetNamespace = "http://estructuras/", className = "estructuras.BalanciarResponse")
+    @Action(input = "http://estructuras/Estructuras/balanciarRequest", output = "http://estructuras/Estructuras/balanciarResponse")
+    public void balanciar(
+        @WebParam(name = "arg0", targetNamespace = "")
+        NodoArbolAVL arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        NodoArbolAVL arg1);
+
+    /**
+     * 
+     * @return
+     *     returns estructuras.NodoadminitradorAVL
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenerraizadmon", targetNamespace = "http://estructuras/", className = "estructuras.Obtenerraizadmon")
+    @ResponseWrapper(localName = "obtenerraizadmonResponse", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerraizadmonResponse")
+    @Action(input = "http://estructuras/Estructuras/obtenerraizadmonRequest", output = "http://estructuras/Estructuras/obtenerraizadmonResponse")
+    public NodoadminitradorAVL obtenerraizadmon();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "codigograp", targetNamespace = "http://estructuras/", className = "estructuras.Codigograp")
+    @ResponseWrapper(localName = "codigograpResponse", targetNamespace = "http://estructuras/", className = "estructuras.CodigograpResponse")
+    @Action(input = "http://estructuras/Estructuras/codigograpRequest", output = "http://estructuras/Estructuras/codigograpResponse")
+    public String codigograp(
+        @WebParam(name = "arg0", targetNamespace = "")
+        NodoadminitradorAVL arg0);
+
+    /**
+     * 
+     * @param d
+     * @return
+     *     returns int
+     */
+    @WebMethod(operationName = "Insertar")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Insertar", targetNamespace = "http://estructuras/", className = "estructuras.Insertar")
+    @ResponseWrapper(localName = "InsertarResponse", targetNamespace = "http://estructuras/", className = "estructuras.InsertarResponse")
+    @Action(input = "http://estructuras/Estructuras/InsertarRequest", output = "http://estructuras/Estructuras/InsertarResponse")
+    public int insertar(
+        @WebParam(name = "d", targetNamespace = "")
+        int d);
+
+    /**
+     * 
+     */
+    @WebMethod
+    @RequestWrapper(localName = "graficarcompleta", targetNamespace = "http://estructuras/", className = "estructuras.Graficarcompleta")
+    @ResponseWrapper(localName = "graficarcompletaResponse", targetNamespace = "http://estructuras/", className = "estructuras.GraficarcompletaResponse")
+    @Action(input = "http://estructuras/Estructuras/graficarcompletaRequest", output = "http://estructuras/Estructuras/graficarcompletaResponse")
+    public void graficarcompleta();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns estructuras.NodoadminitradorAVL
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "rotacionderadmin", targetNamespace = "http://estructuras/", className = "estructuras.Rotacionderadmin")
+    @ResponseWrapper(localName = "rotacionderadminResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotacionderadminResponse")
+    @Action(input = "http://estructuras/Estructuras/rotacionderadminRequest", output = "http://estructuras/Estructuras/rotacionderadminResponse")
+    public NodoadminitradorAVL rotacionderadmin(
+        @WebParam(name = "arg0", targetNamespace = "")
+        NodoadminitradorAVL arg0);
+
+    /**
+     * 
+     * @return
+     *     returns estructuras.NodoArbolAVL
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getRaiz", targetNamespace = "http://estructuras/", className = "estructuras.GetRaiz")
+    @ResponseWrapper(localName = "getRaizResponse", targetNamespace = "http://estructuras/", className = "estructuras.GetRaizResponse")
+    @Action(input = "http://estructuras/Estructuras/getRaizRequest", output = "http://estructuras/Estructuras/getRaizResponse")
+    public NodoArbolAVL getRaiz();
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns estructuras.NodoadminitradorAVL
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "insertarAVL1", targetNamespace = "http://estructuras/", className = "estructuras.InsertarAVL1")
+    @ResponseWrapper(localName = "insertarAVL1Response", targetNamespace = "http://estructuras/", className = "estructuras.InsertarAVL1Response")
+    @Action(input = "http://estructuras/Estructuras/insertarAVL1Request", output = "http://estructuras/Estructuras/insertarAVL1Response")
+    public NodoadminitradorAVL insertarAVL1(
+        @WebParam(name = "arg0", targetNamespace = "")
+        NodoadminitradorAVL arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        NodoadminitradorAVL arg1);
+
+    /**
+     * 
+     * @return
+     *     returns estructuras.NodoArbolAVL
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenerraiz", targetNamespace = "http://estructuras/", className = "estructuras.Obtenerraiz")
+    @ResponseWrapper(localName = "obtenerraizResponse", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerraizResponse")
+    @Action(input = "http://estructuras/Estructuras/obtenerraizRequest", output = "http://estructuras/Estructuras/obtenerraizResponse")
+    public NodoArbolAVL obtenerraiz();
 
     /**
      * 
@@ -441,21 +480,6 @@ public interface Estructuras {
 
     /**
      * 
-     * @param d
-     * @return
-     *     returns int
-     */
-    @WebMethod(operationName = "Insertar")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Insertar", targetNamespace = "http://estructuras/", className = "estructuras.Insertar")
-    @ResponseWrapper(localName = "InsertarResponse", targetNamespace = "http://estructuras/", className = "estructuras.InsertarResponse")
-    @Action(input = "http://estructuras/Estructuras/InsertarRequest", output = "http://estructuras/Estructuras/InsertarResponse")
-    public int insertar(
-        @WebParam(name = "d", targetNamespace = "")
-        int d);
-
-    /**
-     * 
      * @param arg1
      * @param arg0
      * @return
@@ -474,15 +498,18 @@ public interface Estructuras {
 
     /**
      * 
+     * @param arg0
      * @return
-     *     returns estructuras.NodoArbolAVL
+     *     returns int
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerraiz", targetNamespace = "http://estructuras/", className = "estructuras.Obtenerraiz")
-    @ResponseWrapper(localName = "obtenerraizResponse", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerraizResponse")
-    @Action(input = "http://estructuras/Estructuras/obtenerraizRequest", output = "http://estructuras/Estructuras/obtenerraizResponse")
-    public NodoArbolAVL obtenerraiz();
+    @RequestWrapper(localName = "obtenerFE", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerFE")
+    @ResponseWrapper(localName = "obtenerFEResponse", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerFEResponse")
+    @Action(input = "http://estructuras/Estructuras/obtenerFERequest", output = "http://estructuras/Estructuras/obtenerFEResponse")
+    public int obtenerFE(
+        @WebParam(name = "arg0", targetNamespace = "")
+        NodoArbolAVL arg0);
 
     /**
      * 
@@ -498,58 +525,31 @@ public interface Estructuras {
 
     /**
      * 
-     * @param arg1
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "balanciar", targetNamespace = "http://estructuras/", className = "estructuras.Balanciar")
-    @ResponseWrapper(localName = "balanciarResponse", targetNamespace = "http://estructuras/", className = "estructuras.BalanciarResponse")
-    @Action(input = "http://estructuras/Estructuras/balanciarRequest", output = "http://estructuras/Estructuras/balanciarResponse")
-    public void balanciar(
-        @WebParam(name = "arg0", targetNamespace = "")
-        NodoArbolAVL arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        NodoArbolAVL arg1);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns estructuras.NodoArbolAVL
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "rotacionizq", targetNamespace = "http://estructuras/", className = "estructuras.Rotacionizq")
-    @ResponseWrapper(localName = "rotacionizqResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotacionizqResponse")
-    @Action(input = "http://estructuras/Estructuras/rotacionizqRequest", output = "http://estructuras/Estructuras/rotacionizqResponse")
-    public NodoArbolAVL rotacionizq(
-        @WebParam(name = "arg0", targetNamespace = "")
-        NodoArbolAVL arg0);
-
-    /**
-     * 
-     * @return
-     *     returns estructuras.NodoArbolAVL
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getRaiz", targetNamespace = "http://estructuras/", className = "estructuras.GetRaiz")
-    @ResponseWrapper(localName = "getRaizResponse", targetNamespace = "http://estructuras/", className = "estructuras.GetRaizResponse")
-    @Action(input = "http://estructuras/Estructuras/getRaizRequest", output = "http://estructuras/Estructuras/getRaizResponse")
-    public NodoArbolAVL getRaiz();
-
-    /**
-     * 
      * @param arg0
      * @return
      *     returns int
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerFE", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerFE")
-    @ResponseWrapper(localName = "obtenerFEResponse", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerFEResponse")
-    @Action(input = "http://estructuras/Estructuras/obtenerFERequest", output = "http://estructuras/Estructuras/obtenerFEResponse")
-    public int obtenerFE(
+    @RequestWrapper(localName = "obtenerFEadmin", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerFEadmin")
+    @ResponseWrapper(localName = "obtenerFEadminResponse", targetNamespace = "http://estructuras/", className = "estructuras.ObtenerFEadminResponse")
+    @Action(input = "http://estructuras/Estructuras/obtenerFEadminRequest", output = "http://estructuras/Estructuras/obtenerFEadminResponse")
+    public int obtenerFEadmin(
+        @WebParam(name = "arg0", targetNamespace = "")
+        NodoadminitradorAVL arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns estructuras.NodoArbolAVL
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "rotaciondobleizq", targetNamespace = "http://estructuras/", className = "estructuras.Rotaciondobleizq")
+    @ResponseWrapper(localName = "rotaciondobleizqResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotaciondobleizqResponse")
+    @Action(input = "http://estructuras/Estructuras/rotaciondobleizqRequest", output = "http://estructuras/Estructuras/rotaciondobleizqResponse")
+    public NodoArbolAVL rotaciondobleizq(
         @WebParam(name = "arg0", targetNamespace = "")
         NodoArbolAVL arg0);
 
@@ -570,20 +570,83 @@ public interface Estructuras {
 
     /**
      * 
-     * @param pass
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "setRaiz1", targetNamespace = "http://estructuras/", className = "estructuras.SetRaiz1")
+    @ResponseWrapper(localName = "setRaiz1Response", targetNamespace = "http://estructuras/", className = "estructuras.SetRaiz1Response")
+    @Action(input = "http://estructuras/Estructuras/setRaiz1Request", output = "http://estructuras/Estructuras/setRaiz1Response")
+    public void setRaiz1(
+        @WebParam(name = "arg0", targetNamespace = "")
+        NodoadminitradorAVL arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns estructuras.NodoadminitradorAVL
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "rotacionizqadmin", targetNamespace = "http://estructuras/", className = "estructuras.Rotacionizqadmin")
+    @ResponseWrapper(localName = "rotacionizqadminResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotacionizqadminResponse")
+    @Action(input = "http://estructuras/Estructuras/rotacionizqadminRequest", output = "http://estructuras/Estructuras/rotacionizqadminResponse")
+    public NodoadminitradorAVL rotacionizqadmin(
+        @WebParam(name = "arg0", targetNamespace = "")
+        NodoadminitradorAVL arg0);
+
+    /**
+     * 
+     */
+    @WebMethod
+    @RequestWrapper(localName = "graficar", targetNamespace = "http://estructuras/", className = "estructuras.Graficar")
+    @ResponseWrapper(localName = "graficarResponse", targetNamespace = "http://estructuras/", className = "estructuras.GraficarResponse")
+    @Action(input = "http://estructuras/Estructuras/graficarRequest", output = "http://estructuras/Estructuras/graficarResponse")
+    public void graficar();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns estructuras.NodoadminitradorAVL
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "rotaciondobleizqadmin", targetNamespace = "http://estructuras/", className = "estructuras.Rotaciondobleizqadmin")
+    @ResponseWrapper(localName = "rotaciondobleizqadminResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotaciondobleizqadminResponse")
+    @Action(input = "http://estructuras/Estructuras/rotaciondobleizqadminRequest", output = "http://estructuras/Estructuras/rotaciondobleizqadminResponse")
+    public NodoadminitradorAVL rotaciondobleizqadmin(
+        @WebParam(name = "arg0", targetNamespace = "")
+        NodoadminitradorAVL arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns estructuras.NodoadminitradorAVL
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "rotaciondoblederadmin", targetNamespace = "http://estructuras/", className = "estructuras.Rotaciondoblederadmin")
+    @ResponseWrapper(localName = "rotaciondoblederadminResponse", targetNamespace = "http://estructuras/", className = "estructuras.RotaciondoblederadminResponse")
+    @Action(input = "http://estructuras/Estructuras/rotaciondoblederadminRequest", output = "http://estructuras/Estructuras/rotaciondoblederadminResponse")
+    public NodoadminitradorAVL rotaciondoblederadmin(
+        @WebParam(name = "arg0", targetNamespace = "")
+        NodoadminitradorAVL arg0);
+
+    /**
+     * 
      * @param id
      * @return
      *     returns boolean
      */
-    @WebMethod(operationName = "LoginEstacionclave")
+    @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "LoginEstacionclave", targetNamespace = "http://estructuras/", className = "estructuras.LoginEstacionclave")
-    @ResponseWrapper(localName = "LoginEstacionclaveResponse", targetNamespace = "http://estructuras/", className = "estructuras.LoginEstacionclaveResponse")
-    @Action(input = "http://estructuras/Estructuras/LoginEstacionclaveRequest", output = "http://estructuras/Estructuras/LoginEstacionclaveResponse")
-    public boolean loginEstacionclave(
+    @RequestWrapper(localName = "existeestacioncgeneral", targetNamespace = "http://estructuras/", className = "estructuras.Existeestacioncgeneral")
+    @ResponseWrapper(localName = "existeestacioncgeneralResponse", targetNamespace = "http://estructuras/", className = "estructuras.ExisteestacioncgeneralResponse")
+    @Action(input = "http://estructuras/Estructuras/existeestacioncgeneralRequest", output = "http://estructuras/Estructuras/existeestacioncgeneralResponse")
+    public boolean existeestacioncgeneral(
         @WebParam(name = "id", targetNamespace = "")
-        int id,
-        @WebParam(name = "pass", targetNamespace = "")
-        String pass);
+        int id);
 
 }

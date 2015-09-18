@@ -35,6 +35,7 @@ public class ObjectFactory {
     private final static QName _ObtenerraizResponse_QNAME = new QName("http://estructuras/", "obtenerraizResponse");
     private final static QName _InsertarResponse_QNAME = new QName("http://estructuras/", "InsertarResponse");
     private final static QName _RotaciondobleizqadminResponse_QNAME = new QName("http://estructuras/", "rotaciondobleizqadminResponse");
+    private final static QName _LoginEstaciongeneralResponse_QNAME = new QName("http://estructuras/", "LoginEstaciongeneralResponse");
     private final static QName _SetRaiz1Response_QNAME = new QName("http://estructuras/", "setRaiz1Response");
     private final static QName _BalanciarResponse_QNAME = new QName("http://estructuras/", "balanciarResponse");
     private final static QName _ObtenerFEadmin_QNAME = new QName("http://estructuras/", "obtenerFEadmin");
@@ -58,6 +59,7 @@ public class ObjectFactory {
     private final static QName _ObtenerFEResponse_QNAME = new QName("http://estructuras/", "obtenerFEResponse");
     private final static QName _InsertaradminResponse_QNAME = new QName("http://estructuras/", "InsertaradminResponse");
     private final static QName _ElimnarAvl_QNAME = new QName("http://estructuras/", "elimnar_avl");
+    private final static QName _LoginEstaciongeneral_QNAME = new QName("http://estructuras/", "LoginEstaciongeneral");
     private final static QName _EliminarResponse_QNAME = new QName("http://estructuras/", "eliminarResponse");
     private final static QName _ObtenerFE_QNAME = new QName("http://estructuras/", "obtenerFE");
     private final static QName _PostordenResponse_QNAME = new QName("http://estructuras/", "postordenResponse");
@@ -73,12 +75,14 @@ public class ObjectFactory {
     private final static QName _PreordenResponse_QNAME = new QName("http://estructuras/", "preordenResponse");
     private final static QName _GraficarResponse_QNAME = new QName("http://estructuras/", "graficarResponse");
     private final static QName _InsertarAVLResponse_QNAME = new QName("http://estructuras/", "insertarAVLResponse");
+    private final static QName _ExisteestacioncgeneralResponse_QNAME = new QName("http://estructuras/", "existeestacioncgeneralResponse");
     private final static QName _InsertarAVL1Response_QNAME = new QName("http://estructuras/", "insertarAVL1Response");
     private final static QName _InsertarAVL1_QNAME = new QName("http://estructuras/", "insertarAVL1");
     private final static QName _RotacionderadminResponse_QNAME = new QName("http://estructuras/", "rotacionderadminResponse");
     private final static QName _GraficarEST_QNAME = new QName("http://estructuras/", "graficarEST");
     private final static QName _Rotaciondobleizq_QNAME = new QName("http://estructuras/", "rotaciondobleizq");
     private final static QName _GetRaiz1Response_QNAME = new QName("http://estructuras/", "getRaiz1Response");
+    private final static QName _InsertarEstGen_QNAME = new QName("http://estructuras/", "InsertarEstGen");
     private final static QName _ElimnarAvlResponse_QNAME = new QName("http://estructuras/", "elimnar_avlResponse");
     private final static QName _InsertarAVL_QNAME = new QName("http://estructuras/", "insertarAVL");
     private final static QName _ObtenerraizadmonResponse_QNAME = new QName("http://estructuras/", "obtenerraizadmonResponse");
@@ -91,15 +95,19 @@ public class ObjectFactory {
     private final static QName _Rotaciondoblederadmin_QNAME = new QName("http://estructuras/", "rotaciondoblederadmin");
     private final static QName _Preorden_QNAME = new QName("http://estructuras/", "preorden");
     private final static QName _LoginEstacionclaveResponse_QNAME = new QName("http://estructuras/", "LoginEstacionclaveResponse");
+    private final static QName _GraficarESTGEN_QNAME = new QName("http://estructuras/", "graficarESTGEN");
     private final static QName _CompararParametros_QNAME = new QName("http://estructuras/", "comparar_parametros");
     private final static QName _Obtenernuevonodo_QNAME = new QName("http://estructuras/", "obtenernuevonodo");
     private final static QName _Inorden_QNAME = new QName("http://estructuras/", "Inorden");
     private final static QName _Rotacionder_QNAME = new QName("http://estructuras/", "rotacionder");
+    private final static QName _InsertarEstGenResponse_QNAME = new QName("http://estructuras/", "InsertarEstGenResponse");
     private final static QName _Todoasadmin_QNAME = new QName("http://estructuras/", "todoasadmin");
     private final static QName _InsertarEst_QNAME = new QName("http://estructuras/", "InsertarEst");
     private final static QName _RotaciondoblederResponse_QNAME = new QName("http://estructuras/", "rotaciondoblederResponse");
+    private final static QName _Existeestacioncgeneral_QNAME = new QName("http://estructuras/", "existeestacioncgeneral");
     private final static QName _LoginEstacionclave_QNAME = new QName("http://estructuras/", "LoginEstacionclave");
     private final static QName _InordenResponse_QNAME = new QName("http://estructuras/", "InordenResponse");
+    private final static QName _GraficarESTGENResponse_QNAME = new QName("http://estructuras/", "graficarESTGENResponse");
     private final static QName _Obtenerraizadmon_QNAME = new QName("http://estructuras/", "obtenerraizadmon");
     private final static QName _GetRaiz_QNAME = new QName("http://estructuras/", "getRaiz");
 
@@ -135,6 +143,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link InsertarEstGenResponse }
+     * 
+     */
+    public InsertarEstGenResponse createInsertarEstGenResponse() {
+        return new InsertarEstGenResponse();
+    }
+
+    /**
      * Create an instance of {@link Inorden }
      * 
      */
@@ -156,6 +172,14 @@ public class ObjectFactory {
      */
     public Rotacionder createRotacionder() {
         return new Rotacionder();
+    }
+
+    /**
+     * Create an instance of {@link GraficarESTGEN }
+     * 
+     */
+    public GraficarESTGEN createGraficarESTGEN() {
+        return new GraficarESTGEN();
     }
 
     /**
@@ -199,11 +223,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GraficarESTGENResponse }
+     * 
+     */
+    public GraficarESTGENResponse createGraficarESTGENResponse() {
+        return new GraficarESTGENResponse();
+    }
+
+    /**
      * Create an instance of {@link LoginEstacionclave }
      * 
      */
     public LoginEstacionclave createLoginEstacionclave() {
         return new LoginEstacionclave();
+    }
+
+    /**
+     * Create an instance of {@link Existeestacioncgeneral }
+     * 
+     */
+    public Existeestacioncgeneral createExisteestacioncgeneral() {
+        return new Existeestacioncgeneral();
     }
 
     /**
@@ -252,6 +292,14 @@ public class ObjectFactory {
      */
     public InsertarAVLResponse createInsertarAVLResponse() {
         return new InsertarAVLResponse();
+    }
+
+    /**
+     * Create an instance of {@link ExisteestacioncgeneralResponse }
+     * 
+     */
+    public ExisteestacioncgeneralResponse createExisteestacioncgeneralResponse() {
+        return new ExisteestacioncgeneralResponse();
     }
 
     /**
@@ -348,6 +396,14 @@ public class ObjectFactory {
      */
     public Rotaciondobleizq createRotaciondobleizq() {
         return new Rotaciondobleizq();
+    }
+
+    /**
+     * Create an instance of {@link InsertarEstGen }
+     * 
+     */
+    public InsertarEstGen createInsertarEstGen() {
+        return new InsertarEstGen();
     }
 
     /**
@@ -487,6 +543,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link LoginEstaciongeneral }
+     * 
+     */
+    public LoginEstaciongeneral createLoginEstaciongeneral() {
+        return new LoginEstaciongeneral();
+    }
+
+    /**
      * Create an instance of {@link EliminarResponse }
      * 
      */
@@ -548,6 +612,14 @@ public class ObjectFactory {
      */
     public SetRaiz1Response createSetRaiz1Response() {
         return new SetRaiz1Response();
+    }
+
+    /**
+     * Create an instance of {@link LoginEstaciongeneralResponse }
+     * 
+     */
+    public LoginEstaciongeneralResponse createLoginEstaciongeneralResponse() {
+        return new LoginEstaciongeneralResponse();
     }
 
     /**
@@ -850,6 +922,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoginEstaciongeneralResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://estructuras/", name = "LoginEstaciongeneralResponse")
+    public JAXBElement<LoginEstaciongeneralResponse> createLoginEstaciongeneralResponse(LoginEstaciongeneralResponse value) {
+        return new JAXBElement<LoginEstaciongeneralResponse>(_LoginEstaciongeneralResponse_QNAME, LoginEstaciongeneralResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SetRaiz1Response }{@code >}}
      * 
      */
@@ -1057,6 +1138,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoginEstaciongeneral }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://estructuras/", name = "LoginEstaciongeneral")
+    public JAXBElement<LoginEstaciongeneral> createLoginEstaciongeneral(LoginEstaciongeneral value) {
+        return new JAXBElement<LoginEstaciongeneral>(_LoginEstaciongeneral_QNAME, LoginEstaciongeneral.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link EliminarResponse }{@code >}}
      * 
      */
@@ -1192,6 +1282,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ExisteestacioncgeneralResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://estructuras/", name = "existeestacioncgeneralResponse")
+    public JAXBElement<ExisteestacioncgeneralResponse> createExisteestacioncgeneralResponse(ExisteestacioncgeneralResponse value) {
+        return new JAXBElement<ExisteestacioncgeneralResponse>(_ExisteestacioncgeneralResponse_QNAME, ExisteestacioncgeneralResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link InsertarAVL1Response }{@code >}}
      * 
      */
@@ -1243,6 +1342,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://estructuras/", name = "getRaiz1Response")
     public JAXBElement<GetRaiz1Response> createGetRaiz1Response(GetRaiz1Response value) {
         return new JAXBElement<GetRaiz1Response>(_GetRaiz1Response_QNAME, GetRaiz1Response.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarEstGen }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://estructuras/", name = "InsertarEstGen")
+    public JAXBElement<InsertarEstGen> createInsertarEstGen(InsertarEstGen value) {
+        return new JAXBElement<InsertarEstGen>(_InsertarEstGen_QNAME, InsertarEstGen.class, null, value);
     }
 
     /**
@@ -1354,6 +1462,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GraficarESTGEN }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://estructuras/", name = "graficarESTGEN")
+    public JAXBElement<GraficarESTGEN> createGraficarESTGEN(GraficarESTGEN value) {
+        return new JAXBElement<GraficarESTGEN>(_GraficarESTGEN_QNAME, GraficarESTGEN.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CompararParametros }{@code >}}
      * 
      */
@@ -1390,6 +1507,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarEstGenResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://estructuras/", name = "InsertarEstGenResponse")
+    public JAXBElement<InsertarEstGenResponse> createInsertarEstGenResponse(InsertarEstGenResponse value) {
+        return new JAXBElement<InsertarEstGenResponse>(_InsertarEstGenResponse_QNAME, InsertarEstGenResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Todoasadmin }{@code >}}
      * 
      */
@@ -1417,6 +1543,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Existeestacioncgeneral }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://estructuras/", name = "existeestacioncgeneral")
+    public JAXBElement<Existeestacioncgeneral> createExisteestacioncgeneral(Existeestacioncgeneral value) {
+        return new JAXBElement<Existeestacioncgeneral>(_Existeestacioncgeneral_QNAME, Existeestacioncgeneral.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link LoginEstacionclave }{@code >}}
      * 
      */
@@ -1432,6 +1567,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://estructuras/", name = "InordenResponse")
     public JAXBElement<InordenResponse> createInordenResponse(InordenResponse value) {
         return new JAXBElement<InordenResponse>(_InordenResponse_QNAME, InordenResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GraficarESTGENResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://estructuras/", name = "graficarESTGENResponse")
+    public JAXBElement<GraficarESTGENResponse> createGraficarESTGENResponse(GraficarESTGENResponse value) {
+        return new JAXBElement<GraficarESTGENResponse>(_GraficarESTGENResponse_QNAME, GraficarESTGENResponse.class, null, value);
     }
 
     /**

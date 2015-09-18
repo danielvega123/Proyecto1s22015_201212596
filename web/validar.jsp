@@ -87,6 +87,30 @@
     %>
     <%-- end web service invocation --%><hr/>
 
+        <%-- start web service invocation --%><hr/>
+    <%
+        if(request.getParameter("idEstGen")!= null && request.getParameter("passEstGen")!= null){
+            try {
+	estructuras.Estructuras_Service service = new estructuras.Estructuras_Service();
+	estructuras.Estructuras port = service.getEstructurasPort();
+	 // TODO initialize WS operation arguments here
+	int id = Integer.parseInt(String.valueOf(request.getParameter("idEstGen")));
+	java.lang.String pass2 = String.valueOf(request.getParameter("passEstGen"));
+	// TODO process result here
+	boolean result1 = port.loginEstaciongeneral(id, pass2);
+	if(result1==true){
+                response.sendRedirect("paginaadmin1.jsp");
+            }else{
+                response.sendRedirect("index.html");
+            }
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+        }
+    
+    %>
+    <%-- end web service invocation --%><hr/>
+
 
 
 

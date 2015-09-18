@@ -25,7 +25,7 @@
                                 <li><a href="veradmin.jsp">Ver administradores</a></li>
                                  <li><a href="Asignarbuses.jsp">Asignar buses</a></li>
                                 <li><a href="CrearESTclave.jsp">Crear Estacion Clave</a></li>
-				
+				<li><a href="CrearESTgeneral.jsp">Crear Estacion General</a></li>
 			</ul>
 		</div>
 		<div id="logo">
@@ -66,6 +66,24 @@
 
 
      <img src ="estClave.jpg">
+   
+        </form>
+    <form action="veradmin.jsp" method="POST" align = "CENTER">
+            <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructuras.Estructuras_Service service = new estructuras.Estructuras_Service();
+	estructuras.Estructuras port = service.getEstructurasPort();
+	port.graficarESTGEN();
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+
+
+
+     <img src ="estGen.jpg">
    
         </form>
             
