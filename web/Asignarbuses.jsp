@@ -15,7 +15,7 @@
         <title>Menu administrador</title>
     </head>
     <body>
-       <body>
+       
         <div id="wrapper">
 	<div id="header">
 		<div id="menu">
@@ -27,6 +27,8 @@
                                 <li><a href="Asignarbuses.jsp">Asignar buses</a></li>
                                     <li><a href="CrearESTclave.jsp">Crear Estacion Clave</a></li>
 				<li><a href="CrearESTgeneral.jsp">Crear Estacion General</a></li>
+				<li><a href="eliminarestacionclave.jsp">Eliminar Estacion General</a></li>
+				<li><a href="eliminarestaciongeneral.jsp">Eliminar Estacion General</a></li>
 				
 			</ul>
 		</div>

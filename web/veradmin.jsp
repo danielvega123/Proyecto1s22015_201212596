@@ -26,7 +26,10 @@
                                  <li><a href="Asignarbuses.jsp">Asignar buses</a></li>
                                 <li><a href="CrearESTclave.jsp">Crear Estacion Clave</a></li>
 				<li><a href="CrearESTgeneral.jsp">Crear Estacion General</a></li>
-			</ul>
+                                <li><a href="eliminarestacionclave.jsp">Eliminar Estacion Clave</a></li>
+				<li><a href="eliminarestaciongeneral.jsp">Eliminar Estacion General</a></li>
+				
+                        </ul>
 		</div>
 		<div id="logo">
 			<h1><a href="#"><span>Municipalidad de Guatemala</span></a></h1>
@@ -86,6 +89,37 @@
      <img src ="estGen.jpg">
    
         </form>
+            <form action="veradmin.jsp" method="POST" align = "CENTER">
+                    <%-- start web service invocation --%><hr/>
+ 
+
+    <%
+    try {
+	estructuras.Estructuras_Service service = new estructuras.Estructuras_Service();
+	estructuras.Estructuras port = service.getEstructurasPort();
+	// TODO process result here
+	java.util.List<java.lang.Object> result = port.imprimirListadmin();
+        int j = result.size();
+        int i;
             
+    %>
+        <SELECT NAME="selCombo"> 
+  
+        
+       <% for (i=0; i<j; i++){
+           String corre = result.get(i).toString();
+       %> <option><%=corre%> </option><%
+           
+        }
+        
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    
+    <%-- end web service invocation --%><hr/>
+            </SELECT> 
+        </form>
     </body>
 </html>

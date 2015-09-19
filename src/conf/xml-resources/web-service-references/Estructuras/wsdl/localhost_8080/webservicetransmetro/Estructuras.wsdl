@@ -4,11 +4,209 @@
 <xsd:import namespace="http://estructuras/" schemaLocation="http://localhost:8080/webservicetransmetro/Estructuras?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="InsertarEst">
-<part name="parameters" element="tns:InsertarEst"/>
+<message name="rotaciondobleizqadmin">
+<part name="parameters" element="tns:rotaciondobleizqadmin"/>
 </message>
-<message name="InsertarEstResponse">
-<part name="parameters" element="tns:InsertarEstResponse"/>
+<message name="rotaciondobleizqadminResponse">
+<part name="parameters" element="tns:rotaciondobleizqadminResponse"/>
+</message>
+<message name="rotaciondoblederadmin">
+<part name="parameters" element="tns:rotaciondoblederadmin"/>
+</message>
+<message name="rotaciondoblederadminResponse">
+<part name="parameters" element="tns:rotaciondoblederadminResponse"/>
+</message>
+<message name="imprimir_listaestcla">
+<part name="parameters" element="tns:imprimir_listaestcla"/>
+</message>
+<message name="imprimir_listaestclaResponse">
+<part name="parameters" element="tns:imprimir_listaestclaResponse"/>
+</message>
+<message name="existeestacionclave">
+<part name="parameters" element="tns:existeestacionclave"/>
+</message>
+<message name="existeestacionclaveResponse">
+<part name="parameters" element="tns:existeestacionclaveResponse"/>
+</message>
+<message name="imprimir_listadmin">
+<part name="parameters" element="tns:imprimir_listadmin"/>
+</message>
+<message name="imprimir_listadminResponse">
+<part name="parameters" element="tns:imprimir_listadminResponse"/>
+</message>
+<message name="existeestacioncgeneral">
+<part name="parameters" element="tns:existeestacioncgeneral"/>
+</message>
+<message name="existeestacioncgeneralResponse">
+<part name="parameters" element="tns:existeestacioncgeneralResponse"/>
+</message>
+<message name="rotaciondobleizq">
+<part name="parameters" element="tns:rotaciondobleizq"/>
+</message>
+<message name="rotaciondobleizqResponse">
+<part name="parameters" element="tns:rotaciondobleizqResponse"/>
+</message>
+<message name="rotacionder">
+<part name="parameters" element="tns:rotacionder"/>
+</message>
+<message name="rotacionderResponse">
+<part name="parameters" element="tns:rotacionderResponse"/>
+</message>
+<message name="preorden">
+<part name="parameters" element="tns:preorden"/>
+</message>
+<message name="preordenResponse">
+<part name="parameters" element="tns:preordenResponse"/>
+</message>
+<message name="buscar">
+<part name="parameters" element="tns:buscar"/>
+</message>
+<message name="buscarResponse">
+<part name="parameters" element="tns:buscarResponse"/>
+</message>
+<message name="insertarAVL">
+<part name="parameters" element="tns:insertarAVL"/>
+</message>
+<message name="insertarAVLResponse">
+<part name="parameters" element="tns:insertarAVLResponse"/>
+</message>
+<message name="hello">
+<part name="parameters" element="tns:hello"/>
+</message>
+<message name="helloResponse">
+<part name="parameters" element="tns:helloResponse"/>
+</message>
+<message name="balanciar">
+<part name="parameters" element="tns:balanciar"/>
+</message>
+<message name="balanciarResponse">
+<part name="parameters" element="tns:balanciarResponse"/>
+</message>
+<message name="eliminar">
+<part name="parameters" element="tns:eliminar"/>
+</message>
+<message name="eliminarResponse">
+<part name="parameters" element="tns:eliminarResponse"/>
+</message>
+<message name="getRaiz1">
+<part name="parameters" element="tns:getRaiz1"/>
+</message>
+<message name="getRaiz1Response">
+<part name="parameters" element="tns:getRaiz1Response"/>
+</message>
+<message name="Inorden">
+<part name="parameters" element="tns:Inorden"/>
+</message>
+<message name="InordenResponse">
+<part name="parameters" element="tns:InordenResponse"/>
+</message>
+<message name="setRaiz">
+<part name="parameters" element="tns:setRaiz"/>
+</message>
+<message name="setRaizResponse">
+<part name="parameters" element="tns:setRaizResponse"/>
+</message>
+<message name="postorden">
+<part name="parameters" element="tns:postorden"/>
+</message>
+<message name="postordenResponse">
+<part name="parameters" element="tns:postordenResponse"/>
+</message>
+<message name="setRaiz1">
+<part name="parameters" element="tns:setRaiz1"/>
+</message>
+<message name="setRaiz1Response">
+<part name="parameters" element="tns:setRaiz1Response"/>
+</message>
+<message name="obtenerFE">
+<part name="parameters" element="tns:obtenerFE"/>
+</message>
+<message name="obtenerFEResponse">
+<part name="parameters" element="tns:obtenerFEResponse"/>
+</message>
+<message name="obtenerraizadmon">
+<part name="parameters" element="tns:obtenerraizadmon"/>
+</message>
+<message name="obtenerraizadmonResponse">
+<part name="parameters" element="tns:obtenerraizadmonResponse"/>
+</message>
+<message name="rotacionizqadmin">
+<part name="parameters" element="tns:rotacionizqadmin"/>
+</message>
+<message name="rotacionizqadminResponse">
+<part name="parameters" element="tns:rotacionizqadminResponse"/>
+</message>
+<message name="obtenerFEadmin">
+<part name="parameters" element="tns:obtenerFEadmin"/>
+</message>
+<message name="obtenerFEadminResponse">
+<part name="parameters" element="tns:obtenerFEadminResponse"/>
+</message>
+<message name="obtenernuevonodo">
+<part name="parameters" element="tns:obtenernuevonodo"/>
+</message>
+<message name="obtenernuevonodoResponse">
+<part name="parameters" element="tns:obtenernuevonodoResponse"/>
+</message>
+<message name="Insertar">
+<part name="parameters" element="tns:Insertar"/>
+</message>
+<message name="InsertarResponse">
+<part name="parameters" element="tns:InsertarResponse"/>
+</message>
+<message name="insertarAVL1">
+<part name="parameters" element="tns:insertarAVL1"/>
+</message>
+<message name="insertarAVL1Response">
+<part name="parameters" element="tns:insertarAVL1Response"/>
+</message>
+<message name="elimnar_avl">
+<part name="parameters" element="tns:elimnar_avl"/>
+</message>
+<message name="elimnar_avlResponse">
+<part name="parameters" element="tns:elimnar_avlResponse"/>
+</message>
+<message name="rotacionizq">
+<part name="parameters" element="tns:rotacionizq"/>
+</message>
+<message name="rotacionizqResponse">
+<part name="parameters" element="tns:rotacionizqResponse"/>
+</message>
+<message name="codigograp">
+<part name="parameters" element="tns:codigograp"/>
+</message>
+<message name="codigograpResponse">
+<part name="parameters" element="tns:codigograpResponse"/>
+</message>
+<message name="obtenerraiz">
+<part name="parameters" element="tns:obtenerraiz"/>
+</message>
+<message name="obtenerraizResponse">
+<part name="parameters" element="tns:obtenerraizResponse"/>
+</message>
+<message name="getRaiz">
+<part name="parameters" element="tns:getRaiz"/>
+</message>
+<message name="getRaizResponse">
+<part name="parameters" element="tns:getRaizResponse"/>
+</message>
+<message name="rotacionderadmin">
+<part name="parameters" element="tns:rotacionderadmin"/>
+</message>
+<message name="rotacionderadminResponse">
+<part name="parameters" element="tns:rotacionderadminResponse"/>
+</message>
+<message name="rotaciondobleder">
+<part name="parameters" element="tns:rotaciondobleder"/>
+</message>
+<message name="rotaciondoblederResponse">
+<part name="parameters" element="tns:rotaciondoblederResponse"/>
+</message>
+<message name="altura">
+<part name="parameters" element="tns:altura"/>
+</message>
+<message name="alturaResponse">
+<part name="parameters" element="tns:alturaResponse"/>
 </message>
 <message name="Insertaradmin">
 <part name="parameters" element="tns:Insertaradmin"/>
@@ -16,11 +214,11 @@
 <message name="InsertaradminResponse">
 <part name="parameters" element="tns:InsertaradminResponse"/>
 </message>
-<message name="LoginEstacionclave">
-<part name="parameters" element="tns:LoginEstacionclave"/>
+<message name="graficar">
+<part name="parameters" element="tns:graficar"/>
 </message>
-<message name="LoginEstacionclaveResponse">
-<part name="parameters" element="tns:LoginEstacionclaveResponse"/>
+<message name="graficarResponse">
+<part name="parameters" element="tns:graficarResponse"/>
 </message>
 <message name="InsertarEstGen">
 <part name="parameters" element="tns:InsertarEstGen"/>
@@ -34,11 +232,11 @@
 <message name="graficarESTGENResponse">
 <part name="parameters" element="tns:graficarESTGENResponse"/>
 </message>
-<message name="LoginEstaciongeneral">
-<part name="parameters" element="tns:LoginEstaciongeneral"/>
+<message name="LoginEstacionclave">
+<part name="parameters" element="tns:LoginEstacionclave"/>
 </message>
-<message name="LoginEstaciongeneralResponse">
-<part name="parameters" element="tns:LoginEstaciongeneralResponse"/>
+<message name="LoginEstacionclaveResponse">
+<part name="parameters" element="tns:LoginEstacionclaveResponse"/>
 </message>
 <message name="comparar_parametros">
 <part name="parameters" element="tns:comparar_parametros"/>
@@ -46,113 +244,11 @@
 <message name="comparar_parametrosResponse">
 <part name="parameters" element="tns:comparar_parametrosResponse"/>
 </message>
-<message name="existeestacionclave">
-<part name="parameters" element="tns:existeestacionclave"/>
-</message>
-<message name="existeestacionclaveResponse">
-<part name="parameters" element="tns:existeestacionclaveResponse"/>
-</message>
 <message name="todoasadmin">
 <part name="parameters" element="tns:todoasadmin"/>
 </message>
 <message name="todoasadminResponse">
 <part name="parameters" element="tns:todoasadminResponse"/>
-</message>
-<message name="altura">
-<part name="parameters" element="tns:altura"/>
-</message>
-<message name="alturaResponse">
-<part name="parameters" element="tns:alturaResponse"/>
-</message>
-<message name="Inorden">
-<part name="parameters" element="tns:Inorden"/>
-</message>
-<message name="InordenResponse">
-<part name="parameters" element="tns:InordenResponse"/>
-</message>
-<message name="elimnar_avl">
-<part name="parameters" element="tns:elimnar_avl"/>
-</message>
-<message name="elimnar_avlResponse">
-<part name="parameters" element="tns:elimnar_avlResponse"/>
-</message>
-<message name="obtenernuevonodo">
-<part name="parameters" element="tns:obtenernuevonodo"/>
-</message>
-<message name="obtenernuevonodoResponse">
-<part name="parameters" element="tns:obtenernuevonodoResponse"/>
-</message>
-<message name="rotacionder">
-<part name="parameters" element="tns:rotacionder"/>
-</message>
-<message name="rotacionderResponse">
-<part name="parameters" element="tns:rotacionderResponse"/>
-</message>
-<message name="rotaciondobleder">
-<part name="parameters" element="tns:rotaciondobleder"/>
-</message>
-<message name="rotaciondoblederResponse">
-<part name="parameters" element="tns:rotaciondoblederResponse"/>
-</message>
-<message name="eliminar">
-<part name="parameters" element="tns:eliminar"/>
-</message>
-<message name="eliminarResponse">
-<part name="parameters" element="tns:eliminarResponse"/>
-</message>
-<message name="graficarEST">
-<part name="parameters" element="tns:graficarEST"/>
-</message>
-<message name="graficarESTResponse">
-<part name="parameters" element="tns:graficarESTResponse"/>
-</message>
-<message name="setRaiz">
-<part name="parameters" element="tns:setRaiz"/>
-</message>
-<message name="setRaizResponse">
-<part name="parameters" element="tns:setRaizResponse"/>
-</message>
-<message name="rotacionizq">
-<part name="parameters" element="tns:rotacionizq"/>
-</message>
-<message name="rotacionizqResponse">
-<part name="parameters" element="tns:rotacionizqResponse"/>
-</message>
-<message name="getRaiz1">
-<part name="parameters" element="tns:getRaiz1"/>
-</message>
-<message name="getRaiz1Response">
-<part name="parameters" element="tns:getRaiz1Response"/>
-</message>
-<message name="preorden">
-<part name="parameters" element="tns:preorden"/>
-</message>
-<message name="preordenResponse">
-<part name="parameters" element="tns:preordenResponse"/>
-</message>
-<message name="balanciar">
-<part name="parameters" element="tns:balanciar"/>
-</message>
-<message name="balanciarResponse">
-<part name="parameters" element="tns:balanciarResponse"/>
-</message>
-<message name="obtenerraizadmon">
-<part name="parameters" element="tns:obtenerraizadmon"/>
-</message>
-<message name="obtenerraizadmonResponse">
-<part name="parameters" element="tns:obtenerraizadmonResponse"/>
-</message>
-<message name="codigograp">
-<part name="parameters" element="tns:codigograp"/>
-</message>
-<message name="codigograpResponse">
-<part name="parameters" element="tns:codigograpResponse"/>
-</message>
-<message name="Insertar">
-<part name="parameters" element="tns:Insertar"/>
-</message>
-<message name="InsertarResponse">
-<part name="parameters" element="tns:InsertarResponse"/>
 </message>
 <message name="graficarcompleta">
 <part name="parameters" element="tns:graficarcompleta"/>
@@ -160,120 +256,186 @@
 <message name="graficarcompletaResponse">
 <part name="parameters" element="tns:graficarcompletaResponse"/>
 </message>
-<message name="rotacionderadmin">
-<part name="parameters" element="tns:rotacionderadmin"/>
+<message name="graficarEST">
+<part name="parameters" element="tns:graficarEST"/>
 </message>
-<message name="rotacionderadminResponse">
-<part name="parameters" element="tns:rotacionderadminResponse"/>
+<message name="graficarESTResponse">
+<part name="parameters" element="tns:graficarESTResponse"/>
 </message>
-<message name="getRaiz">
-<part name="parameters" element="tns:getRaiz"/>
+<message name="LoginEstaciongeneral">
+<part name="parameters" element="tns:LoginEstaciongeneral"/>
 </message>
-<message name="getRaizResponse">
-<part name="parameters" element="tns:getRaizResponse"/>
+<message name="LoginEstaciongeneralResponse">
+<part name="parameters" element="tns:LoginEstaciongeneralResponse"/>
 </message>
-<message name="insertarAVL1">
-<part name="parameters" element="tns:insertarAVL1"/>
+<message name="InsertarEst">
+<part name="parameters" element="tns:InsertarEst"/>
 </message>
-<message name="insertarAVL1Response">
-<part name="parameters" element="tns:insertarAVL1Response"/>
+<message name="InsertarEstResponse">
+<part name="parameters" element="tns:InsertarEstResponse"/>
 </message>
-<message name="obtenerraiz">
-<part name="parameters" element="tns:obtenerraiz"/>
+<message name="imprimir_listaestgen">
+<part name="parameters" element="tns:imprimir_listaestgen"/>
 </message>
-<message name="obtenerraizResponse">
-<part name="parameters" element="tns:obtenerraizResponse"/>
+<message name="imprimir_listaestgenResponse">
+<part name="parameters" element="tns:imprimir_listaestgenResponse"/>
 </message>
-<message name="insertarAVL">
-<part name="parameters" element="tns:insertarAVL"/>
+<message name="EliminarEstacionGeneral">
+<part name="parameters" element="tns:EliminarEstacionGeneral"/>
 </message>
-<message name="insertarAVLResponse">
-<part name="parameters" element="tns:insertarAVLResponse"/>
+<message name="EliminarEstacionGeneralResponse">
+<part name="parameters" element="tns:EliminarEstacionGeneralResponse"/>
 </message>
-<message name="buscar">
-<part name="parameters" element="tns:buscar"/>
+<message name="EliminarEstacionClave">
+<part name="parameters" element="tns:EliminarEstacionClave"/>
 </message>
-<message name="buscarResponse">
-<part name="parameters" element="tns:buscarResponse"/>
-</message>
-<message name="obtenerFE">
-<part name="parameters" element="tns:obtenerFE"/>
-</message>
-<message name="obtenerFEResponse">
-<part name="parameters" element="tns:obtenerFEResponse"/>
-</message>
-<message name="postorden">
-<part name="parameters" element="tns:postorden"/>
-</message>
-<message name="postordenResponse">
-<part name="parameters" element="tns:postordenResponse"/>
-</message>
-<message name="obtenerFEadmin">
-<part name="parameters" element="tns:obtenerFEadmin"/>
-</message>
-<message name="obtenerFEadminResponse">
-<part name="parameters" element="tns:obtenerFEadminResponse"/>
-</message>
-<message name="rotaciondobleizq">
-<part name="parameters" element="tns:rotaciondobleizq"/>
-</message>
-<message name="rotaciondobleizqResponse">
-<part name="parameters" element="tns:rotaciondobleizqResponse"/>
-</message>
-<message name="hello">
-<part name="parameters" element="tns:hello"/>
-</message>
-<message name="helloResponse">
-<part name="parameters" element="tns:helloResponse"/>
-</message>
-<message name="setRaiz1">
-<part name="parameters" element="tns:setRaiz1"/>
-</message>
-<message name="setRaiz1Response">
-<part name="parameters" element="tns:setRaiz1Response"/>
-</message>
-<message name="rotacionizqadmin">
-<part name="parameters" element="tns:rotacionizqadmin"/>
-</message>
-<message name="rotacionizqadminResponse">
-<part name="parameters" element="tns:rotacionizqadminResponse"/>
-</message>
-<message name="graficar">
-<part name="parameters" element="tns:graficar"/>
-</message>
-<message name="graficarResponse">
-<part name="parameters" element="tns:graficarResponse"/>
-</message>
-<message name="rotaciondobleizqadmin">
-<part name="parameters" element="tns:rotaciondobleizqadmin"/>
-</message>
-<message name="rotaciondobleizqadminResponse">
-<part name="parameters" element="tns:rotaciondobleizqadminResponse"/>
-</message>
-<message name="rotaciondoblederadmin">
-<part name="parameters" element="tns:rotaciondoblederadmin"/>
-</message>
-<message name="rotaciondoblederadminResponse">
-<part name="parameters" element="tns:rotaciondoblederadminResponse"/>
-</message>
-<message name="existeestacioncgeneral">
-<part name="parameters" element="tns:existeestacioncgeneral"/>
-</message>
-<message name="existeestacioncgeneralResponse">
-<part name="parameters" element="tns:existeestacioncgeneralResponse"/>
+<message name="EliminarEstacionClaveResponse">
+<part name="parameters" element="tns:EliminarEstacionClaveResponse"/>
 </message>
 <portType name="Estructuras">
-<operation name="InsertarEst">
-<input wsam:Action="http://estructuras/Estructuras/InsertarEstRequest" message="tns:InsertarEst"/>
-<output wsam:Action="http://estructuras/Estructuras/InsertarEstResponse" message="tns:InsertarEstResponse"/>
+<operation name="rotaciondobleizqadmin">
+<input wsam:Action="http://estructuras/Estructuras/rotaciondobleizqadminRequest" message="tns:rotaciondobleizqadmin"/>
+<output wsam:Action="http://estructuras/Estructuras/rotaciondobleizqadminResponse" message="tns:rotaciondobleizqadminResponse"/>
+</operation>
+<operation name="rotaciondoblederadmin">
+<input wsam:Action="http://estructuras/Estructuras/rotaciondoblederadminRequest" message="tns:rotaciondoblederadmin"/>
+<output wsam:Action="http://estructuras/Estructuras/rotaciondoblederadminResponse" message="tns:rotaciondoblederadminResponse"/>
+</operation>
+<operation name="imprimir_listaestcla">
+<input wsam:Action="http://estructuras/Estructuras/imprimir_listaestclaRequest" message="tns:imprimir_listaestcla"/>
+<output wsam:Action="http://estructuras/Estructuras/imprimir_listaestclaResponse" message="tns:imprimir_listaestclaResponse"/>
+</operation>
+<operation name="existeestacionclave">
+<input wsam:Action="http://estructuras/Estructuras/existeestacionclaveRequest" message="tns:existeestacionclave"/>
+<output wsam:Action="http://estructuras/Estructuras/existeestacionclaveResponse" message="tns:existeestacionclaveResponse"/>
+</operation>
+<operation name="imprimir_listadmin">
+<input wsam:Action="http://estructuras/Estructuras/imprimir_listadminRequest" message="tns:imprimir_listadmin"/>
+<output wsam:Action="http://estructuras/Estructuras/imprimir_listadminResponse" message="tns:imprimir_listadminResponse"/>
+</operation>
+<operation name="existeestacioncgeneral">
+<input wsam:Action="http://estructuras/Estructuras/existeestacioncgeneralRequest" message="tns:existeestacioncgeneral"/>
+<output wsam:Action="http://estructuras/Estructuras/existeestacioncgeneralResponse" message="tns:existeestacioncgeneralResponse"/>
+</operation>
+<operation name="rotaciondobleizq">
+<input wsam:Action="http://estructuras/Estructuras/rotaciondobleizqRequest" message="tns:rotaciondobleizq"/>
+<output wsam:Action="http://estructuras/Estructuras/rotaciondobleizqResponse" message="tns:rotaciondobleizqResponse"/>
+</operation>
+<operation name="rotacionder">
+<input wsam:Action="http://estructuras/Estructuras/rotacionderRequest" message="tns:rotacionder"/>
+<output wsam:Action="http://estructuras/Estructuras/rotacionderResponse" message="tns:rotacionderResponse"/>
+</operation>
+<operation name="preorden">
+<input wsam:Action="http://estructuras/Estructuras/preordenRequest" message="tns:preorden"/>
+<output wsam:Action="http://estructuras/Estructuras/preordenResponse" message="tns:preordenResponse"/>
+</operation>
+<operation name="buscar">
+<input wsam:Action="http://estructuras/Estructuras/buscarRequest" message="tns:buscar"/>
+<output wsam:Action="http://estructuras/Estructuras/buscarResponse" message="tns:buscarResponse"/>
+</operation>
+<operation name="insertarAVL">
+<input wsam:Action="http://estructuras/Estructuras/insertarAVLRequest" message="tns:insertarAVL"/>
+<output wsam:Action="http://estructuras/Estructuras/insertarAVLResponse" message="tns:insertarAVLResponse"/>
+</operation>
+<operation name="hello">
+<input wsam:Action="http://estructuras/Estructuras/helloRequest" message="tns:hello"/>
+<output wsam:Action="http://estructuras/Estructuras/helloResponse" message="tns:helloResponse"/>
+</operation>
+<operation name="balanciar">
+<input wsam:Action="http://estructuras/Estructuras/balanciarRequest" message="tns:balanciar"/>
+<output wsam:Action="http://estructuras/Estructuras/balanciarResponse" message="tns:balanciarResponse"/>
+</operation>
+<operation name="eliminar">
+<input wsam:Action="http://estructuras/Estructuras/eliminarRequest" message="tns:eliminar"/>
+<output wsam:Action="http://estructuras/Estructuras/eliminarResponse" message="tns:eliminarResponse"/>
+</operation>
+<operation name="getRaiz1">
+<input wsam:Action="http://estructuras/Estructuras/getRaiz1Request" message="tns:getRaiz1"/>
+<output wsam:Action="http://estructuras/Estructuras/getRaiz1Response" message="tns:getRaiz1Response"/>
+</operation>
+<operation name="Inorden">
+<input wsam:Action="http://estructuras/Estructuras/InordenRequest" message="tns:Inorden"/>
+<output wsam:Action="http://estructuras/Estructuras/InordenResponse" message="tns:InordenResponse"/>
+</operation>
+<operation name="setRaiz">
+<input wsam:Action="http://estructuras/Estructuras/setRaizRequest" message="tns:setRaiz"/>
+<output wsam:Action="http://estructuras/Estructuras/setRaizResponse" message="tns:setRaizResponse"/>
+</operation>
+<operation name="postorden">
+<input wsam:Action="http://estructuras/Estructuras/postordenRequest" message="tns:postorden"/>
+<output wsam:Action="http://estructuras/Estructuras/postordenResponse" message="tns:postordenResponse"/>
+</operation>
+<operation name="setRaiz1">
+<input wsam:Action="http://estructuras/Estructuras/setRaiz1Request" message="tns:setRaiz1"/>
+<output wsam:Action="http://estructuras/Estructuras/setRaiz1Response" message="tns:setRaiz1Response"/>
+</operation>
+<operation name="obtenerFE">
+<input wsam:Action="http://estructuras/Estructuras/obtenerFERequest" message="tns:obtenerFE"/>
+<output wsam:Action="http://estructuras/Estructuras/obtenerFEResponse" message="tns:obtenerFEResponse"/>
+</operation>
+<operation name="obtenerraizadmon">
+<input wsam:Action="http://estructuras/Estructuras/obtenerraizadmonRequest" message="tns:obtenerraizadmon"/>
+<output wsam:Action="http://estructuras/Estructuras/obtenerraizadmonResponse" message="tns:obtenerraizadmonResponse"/>
+</operation>
+<operation name="rotacionizqadmin">
+<input wsam:Action="http://estructuras/Estructuras/rotacionizqadminRequest" message="tns:rotacionizqadmin"/>
+<output wsam:Action="http://estructuras/Estructuras/rotacionizqadminResponse" message="tns:rotacionizqadminResponse"/>
+</operation>
+<operation name="obtenerFEadmin">
+<input wsam:Action="http://estructuras/Estructuras/obtenerFEadminRequest" message="tns:obtenerFEadmin"/>
+<output wsam:Action="http://estructuras/Estructuras/obtenerFEadminResponse" message="tns:obtenerFEadminResponse"/>
+</operation>
+<operation name="obtenernuevonodo">
+<input wsam:Action="http://estructuras/Estructuras/obtenernuevonodoRequest" message="tns:obtenernuevonodo"/>
+<output wsam:Action="http://estructuras/Estructuras/obtenernuevonodoResponse" message="tns:obtenernuevonodoResponse"/>
+</operation>
+<operation name="Insertar">
+<input wsam:Action="http://estructuras/Estructuras/InsertarRequest" message="tns:Insertar"/>
+<output wsam:Action="http://estructuras/Estructuras/InsertarResponse" message="tns:InsertarResponse"/>
+</operation>
+<operation name="insertarAVL1">
+<input wsam:Action="http://estructuras/Estructuras/insertarAVL1Request" message="tns:insertarAVL1"/>
+<output wsam:Action="http://estructuras/Estructuras/insertarAVL1Response" message="tns:insertarAVL1Response"/>
+</operation>
+<operation name="elimnar_avl">
+<input wsam:Action="http://estructuras/Estructuras/elimnar_avlRequest" message="tns:elimnar_avl"/>
+<output wsam:Action="http://estructuras/Estructuras/elimnar_avlResponse" message="tns:elimnar_avlResponse"/>
+</operation>
+<operation name="rotacionizq">
+<input wsam:Action="http://estructuras/Estructuras/rotacionizqRequest" message="tns:rotacionizq"/>
+<output wsam:Action="http://estructuras/Estructuras/rotacionizqResponse" message="tns:rotacionizqResponse"/>
+</operation>
+<operation name="codigograp">
+<input wsam:Action="http://estructuras/Estructuras/codigograpRequest" message="tns:codigograp"/>
+<output wsam:Action="http://estructuras/Estructuras/codigograpResponse" message="tns:codigograpResponse"/>
+</operation>
+<operation name="obtenerraiz">
+<input wsam:Action="http://estructuras/Estructuras/obtenerraizRequest" message="tns:obtenerraiz"/>
+<output wsam:Action="http://estructuras/Estructuras/obtenerraizResponse" message="tns:obtenerraizResponse"/>
+</operation>
+<operation name="getRaiz">
+<input wsam:Action="http://estructuras/Estructuras/getRaizRequest" message="tns:getRaiz"/>
+<output wsam:Action="http://estructuras/Estructuras/getRaizResponse" message="tns:getRaizResponse"/>
+</operation>
+<operation name="rotacionderadmin">
+<input wsam:Action="http://estructuras/Estructuras/rotacionderadminRequest" message="tns:rotacionderadmin"/>
+<output wsam:Action="http://estructuras/Estructuras/rotacionderadminResponse" message="tns:rotacionderadminResponse"/>
+</operation>
+<operation name="rotaciondobleder">
+<input wsam:Action="http://estructuras/Estructuras/rotaciondoblederRequest" message="tns:rotaciondobleder"/>
+<output wsam:Action="http://estructuras/Estructuras/rotaciondoblederResponse" message="tns:rotaciondoblederResponse"/>
+</operation>
+<operation name="altura">
+<input wsam:Action="http://estructuras/Estructuras/alturaRequest" message="tns:altura"/>
+<output wsam:Action="http://estructuras/Estructuras/alturaResponse" message="tns:alturaResponse"/>
 </operation>
 <operation name="Insertaradmin">
 <input wsam:Action="http://estructuras/Estructuras/InsertaradminRequest" message="tns:Insertaradmin"/>
 <output wsam:Action="http://estructuras/Estructuras/InsertaradminResponse" message="tns:InsertaradminResponse"/>
 </operation>
-<operation name="LoginEstacionclave">
-<input wsam:Action="http://estructuras/Estructuras/LoginEstacionclaveRequest" message="tns:LoginEstacionclave"/>
-<output wsam:Action="http://estructuras/Estructuras/LoginEstacionclaveResponse" message="tns:LoginEstacionclaveResponse"/>
+<operation name="graficar">
+<input wsam:Action="http://estructuras/Estructuras/graficarRequest" message="tns:graficar"/>
+<output wsam:Action="http://estructuras/Estructuras/graficarResponse" message="tns:graficarResponse"/>
 </operation>
 <operation name="InsertarEstGen">
 <input wsam:Action="http://estructuras/Estructuras/InsertarEstGenRequest" message="tns:InsertarEstGen"/>
@@ -283,162 +445,347 @@
 <input wsam:Action="http://estructuras/Estructuras/graficarESTGENRequest" message="tns:graficarESTGEN"/>
 <output wsam:Action="http://estructuras/Estructuras/graficarESTGENResponse" message="tns:graficarESTGENResponse"/>
 </operation>
-<operation name="LoginEstaciongeneral">
-<input wsam:Action="http://estructuras/Estructuras/LoginEstaciongeneralRequest" message="tns:LoginEstaciongeneral"/>
-<output wsam:Action="http://estructuras/Estructuras/LoginEstaciongeneralResponse" message="tns:LoginEstaciongeneralResponse"/>
+<operation name="LoginEstacionclave">
+<input wsam:Action="http://estructuras/Estructuras/LoginEstacionclaveRequest" message="tns:LoginEstacionclave"/>
+<output wsam:Action="http://estructuras/Estructuras/LoginEstacionclaveResponse" message="tns:LoginEstacionclaveResponse"/>
 </operation>
 <operation name="comparar_parametros">
 <input wsam:Action="http://estructuras/Estructuras/comparar_parametrosRequest" message="tns:comparar_parametros"/>
 <output wsam:Action="http://estructuras/Estructuras/comparar_parametrosResponse" message="tns:comparar_parametrosResponse"/>
 </operation>
-<operation name="existeestacionclave">
-<input wsam:Action="http://estructuras/Estructuras/existeestacionclaveRequest" message="tns:existeestacionclave"/>
-<output wsam:Action="http://estructuras/Estructuras/existeestacionclaveResponse" message="tns:existeestacionclaveResponse"/>
-</operation>
 <operation name="todoasadmin">
 <input wsam:Action="http://estructuras/Estructuras/todoasadminRequest" message="tns:todoasadmin"/>
 <output wsam:Action="http://estructuras/Estructuras/todoasadminResponse" message="tns:todoasadminResponse"/>
-</operation>
-<operation name="altura">
-<input wsam:Action="http://estructuras/Estructuras/alturaRequest" message="tns:altura"/>
-<output wsam:Action="http://estructuras/Estructuras/alturaResponse" message="tns:alturaResponse"/>
-</operation>
-<operation name="Inorden">
-<input wsam:Action="http://estructuras/Estructuras/InordenRequest" message="tns:Inorden"/>
-<output wsam:Action="http://estructuras/Estructuras/InordenResponse" message="tns:InordenResponse"/>
-</operation>
-<operation name="elimnar_avl">
-<input wsam:Action="http://estructuras/Estructuras/elimnar_avlRequest" message="tns:elimnar_avl"/>
-<output wsam:Action="http://estructuras/Estructuras/elimnar_avlResponse" message="tns:elimnar_avlResponse"/>
-</operation>
-<operation name="obtenernuevonodo">
-<input wsam:Action="http://estructuras/Estructuras/obtenernuevonodoRequest" message="tns:obtenernuevonodo"/>
-<output wsam:Action="http://estructuras/Estructuras/obtenernuevonodoResponse" message="tns:obtenernuevonodoResponse"/>
-</operation>
-<operation name="rotacionder">
-<input wsam:Action="http://estructuras/Estructuras/rotacionderRequest" message="tns:rotacionder"/>
-<output wsam:Action="http://estructuras/Estructuras/rotacionderResponse" message="tns:rotacionderResponse"/>
-</operation>
-<operation name="rotaciondobleder">
-<input wsam:Action="http://estructuras/Estructuras/rotaciondoblederRequest" message="tns:rotaciondobleder"/>
-<output wsam:Action="http://estructuras/Estructuras/rotaciondoblederResponse" message="tns:rotaciondoblederResponse"/>
-</operation>
-<operation name="eliminar">
-<input wsam:Action="http://estructuras/Estructuras/eliminarRequest" message="tns:eliminar"/>
-<output wsam:Action="http://estructuras/Estructuras/eliminarResponse" message="tns:eliminarResponse"/>
-</operation>
-<operation name="graficarEST">
-<input wsam:Action="http://estructuras/Estructuras/graficarESTRequest" message="tns:graficarEST"/>
-<output wsam:Action="http://estructuras/Estructuras/graficarESTResponse" message="tns:graficarESTResponse"/>
-</operation>
-<operation name="setRaiz">
-<input wsam:Action="http://estructuras/Estructuras/setRaizRequest" message="tns:setRaiz"/>
-<output wsam:Action="http://estructuras/Estructuras/setRaizResponse" message="tns:setRaizResponse"/>
-</operation>
-<operation name="rotacionizq">
-<input wsam:Action="http://estructuras/Estructuras/rotacionizqRequest" message="tns:rotacionizq"/>
-<output wsam:Action="http://estructuras/Estructuras/rotacionizqResponse" message="tns:rotacionizqResponse"/>
-</operation>
-<operation name="getRaiz1">
-<input wsam:Action="http://estructuras/Estructuras/getRaiz1Request" message="tns:getRaiz1"/>
-<output wsam:Action="http://estructuras/Estructuras/getRaiz1Response" message="tns:getRaiz1Response"/>
-</operation>
-<operation name="preorden">
-<input wsam:Action="http://estructuras/Estructuras/preordenRequest" message="tns:preorden"/>
-<output wsam:Action="http://estructuras/Estructuras/preordenResponse" message="tns:preordenResponse"/>
-</operation>
-<operation name="balanciar">
-<input wsam:Action="http://estructuras/Estructuras/balanciarRequest" message="tns:balanciar"/>
-<output wsam:Action="http://estructuras/Estructuras/balanciarResponse" message="tns:balanciarResponse"/>
-</operation>
-<operation name="obtenerraizadmon">
-<input wsam:Action="http://estructuras/Estructuras/obtenerraizadmonRequest" message="tns:obtenerraizadmon"/>
-<output wsam:Action="http://estructuras/Estructuras/obtenerraizadmonResponse" message="tns:obtenerraizadmonResponse"/>
-</operation>
-<operation name="codigograp">
-<input wsam:Action="http://estructuras/Estructuras/codigograpRequest" message="tns:codigograp"/>
-<output wsam:Action="http://estructuras/Estructuras/codigograpResponse" message="tns:codigograpResponse"/>
-</operation>
-<operation name="Insertar">
-<input wsam:Action="http://estructuras/Estructuras/InsertarRequest" message="tns:Insertar"/>
-<output wsam:Action="http://estructuras/Estructuras/InsertarResponse" message="tns:InsertarResponse"/>
 </operation>
 <operation name="graficarcompleta">
 <input wsam:Action="http://estructuras/Estructuras/graficarcompletaRequest" message="tns:graficarcompleta"/>
 <output wsam:Action="http://estructuras/Estructuras/graficarcompletaResponse" message="tns:graficarcompletaResponse"/>
 </operation>
-<operation name="rotacionderadmin">
-<input wsam:Action="http://estructuras/Estructuras/rotacionderadminRequest" message="tns:rotacionderadmin"/>
-<output wsam:Action="http://estructuras/Estructuras/rotacionderadminResponse" message="tns:rotacionderadminResponse"/>
+<operation name="graficarEST">
+<input wsam:Action="http://estructuras/Estructuras/graficarESTRequest" message="tns:graficarEST"/>
+<output wsam:Action="http://estructuras/Estructuras/graficarESTResponse" message="tns:graficarESTResponse"/>
 </operation>
-<operation name="getRaiz">
-<input wsam:Action="http://estructuras/Estructuras/getRaizRequest" message="tns:getRaiz"/>
-<output wsam:Action="http://estructuras/Estructuras/getRaizResponse" message="tns:getRaizResponse"/>
+<operation name="LoginEstaciongeneral">
+<input wsam:Action="http://estructuras/Estructuras/LoginEstaciongeneralRequest" message="tns:LoginEstaciongeneral"/>
+<output wsam:Action="http://estructuras/Estructuras/LoginEstaciongeneralResponse" message="tns:LoginEstaciongeneralResponse"/>
 </operation>
-<operation name="insertarAVL1">
-<input wsam:Action="http://estructuras/Estructuras/insertarAVL1Request" message="tns:insertarAVL1"/>
-<output wsam:Action="http://estructuras/Estructuras/insertarAVL1Response" message="tns:insertarAVL1Response"/>
+<operation name="InsertarEst">
+<input wsam:Action="http://estructuras/Estructuras/InsertarEstRequest" message="tns:InsertarEst"/>
+<output wsam:Action="http://estructuras/Estructuras/InsertarEstResponse" message="tns:InsertarEstResponse"/>
 </operation>
-<operation name="obtenerraiz">
-<input wsam:Action="http://estructuras/Estructuras/obtenerraizRequest" message="tns:obtenerraiz"/>
-<output wsam:Action="http://estructuras/Estructuras/obtenerraizResponse" message="tns:obtenerraizResponse"/>
+<operation name="imprimir_listaestgen">
+<input wsam:Action="http://estructuras/Estructuras/imprimir_listaestgenRequest" message="tns:imprimir_listaestgen"/>
+<output wsam:Action="http://estructuras/Estructuras/imprimir_listaestgenResponse" message="tns:imprimir_listaestgenResponse"/>
 </operation>
-<operation name="insertarAVL">
-<input wsam:Action="http://estructuras/Estructuras/insertarAVLRequest" message="tns:insertarAVL"/>
-<output wsam:Action="http://estructuras/Estructuras/insertarAVLResponse" message="tns:insertarAVLResponse"/>
+<operation name="EliminarEstacionGeneral">
+<input wsam:Action="http://estructuras/Estructuras/EliminarEstacionGeneralRequest" message="tns:EliminarEstacionGeneral"/>
+<output wsam:Action="http://estructuras/Estructuras/EliminarEstacionGeneralResponse" message="tns:EliminarEstacionGeneralResponse"/>
 </operation>
-<operation name="buscar">
-<input wsam:Action="http://estructuras/Estructuras/buscarRequest" message="tns:buscar"/>
-<output wsam:Action="http://estructuras/Estructuras/buscarResponse" message="tns:buscarResponse"/>
-</operation>
-<operation name="obtenerFE">
-<input wsam:Action="http://estructuras/Estructuras/obtenerFERequest" message="tns:obtenerFE"/>
-<output wsam:Action="http://estructuras/Estructuras/obtenerFEResponse" message="tns:obtenerFEResponse"/>
-</operation>
-<operation name="postorden">
-<input wsam:Action="http://estructuras/Estructuras/postordenRequest" message="tns:postorden"/>
-<output wsam:Action="http://estructuras/Estructuras/postordenResponse" message="tns:postordenResponse"/>
-</operation>
-<operation name="obtenerFEadmin">
-<input wsam:Action="http://estructuras/Estructuras/obtenerFEadminRequest" message="tns:obtenerFEadmin"/>
-<output wsam:Action="http://estructuras/Estructuras/obtenerFEadminResponse" message="tns:obtenerFEadminResponse"/>
-</operation>
-<operation name="rotaciondobleizq">
-<input wsam:Action="http://estructuras/Estructuras/rotaciondobleizqRequest" message="tns:rotaciondobleizq"/>
-<output wsam:Action="http://estructuras/Estructuras/rotaciondobleizqResponse" message="tns:rotaciondobleizqResponse"/>
-</operation>
-<operation name="hello">
-<input wsam:Action="http://estructuras/Estructuras/helloRequest" message="tns:hello"/>
-<output wsam:Action="http://estructuras/Estructuras/helloResponse" message="tns:helloResponse"/>
-</operation>
-<operation name="setRaiz1">
-<input wsam:Action="http://estructuras/Estructuras/setRaiz1Request" message="tns:setRaiz1"/>
-<output wsam:Action="http://estructuras/Estructuras/setRaiz1Response" message="tns:setRaiz1Response"/>
-</operation>
-<operation name="rotacionizqadmin">
-<input wsam:Action="http://estructuras/Estructuras/rotacionizqadminRequest" message="tns:rotacionizqadmin"/>
-<output wsam:Action="http://estructuras/Estructuras/rotacionizqadminResponse" message="tns:rotacionizqadminResponse"/>
-</operation>
-<operation name="graficar">
-<input wsam:Action="http://estructuras/Estructuras/graficarRequest" message="tns:graficar"/>
-<output wsam:Action="http://estructuras/Estructuras/graficarResponse" message="tns:graficarResponse"/>
-</operation>
-<operation name="rotaciondobleizqadmin">
-<input wsam:Action="http://estructuras/Estructuras/rotaciondobleizqadminRequest" message="tns:rotaciondobleizqadmin"/>
-<output wsam:Action="http://estructuras/Estructuras/rotaciondobleizqadminResponse" message="tns:rotaciondobleizqadminResponse"/>
-</operation>
-<operation name="rotaciondoblederadmin">
-<input wsam:Action="http://estructuras/Estructuras/rotaciondoblederadminRequest" message="tns:rotaciondoblederadmin"/>
-<output wsam:Action="http://estructuras/Estructuras/rotaciondoblederadminResponse" message="tns:rotaciondoblederadminResponse"/>
-</operation>
-<operation name="existeestacioncgeneral">
-<input wsam:Action="http://estructuras/Estructuras/existeestacioncgeneralRequest" message="tns:existeestacioncgeneral"/>
-<output wsam:Action="http://estructuras/Estructuras/existeestacioncgeneralResponse" message="tns:existeestacioncgeneralResponse"/>
+<operation name="EliminarEstacionClave">
+<input wsam:Action="http://estructuras/Estructuras/EliminarEstacionClaveRequest" message="tns:EliminarEstacionClave"/>
+<output wsam:Action="http://estructuras/Estructuras/EliminarEstacionClaveResponse" message="tns:EliminarEstacionClaveResponse"/>
 </operation>
 </portType>
 <binding name="EstructurasPortBinding" type="tns:Estructuras">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="InsertarEst">
+<operation name="rotaciondobleizqadmin">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="rotaciondoblederadmin">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="imprimir_listaestcla">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="existeestacionclave">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="imprimir_listadmin">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="existeestacioncgeneral">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="rotaciondobleizq">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="rotacionder">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="preorden">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="buscar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="insertarAVL">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="hello">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="balanciar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="eliminar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getRaiz1">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Inorden">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="setRaiz">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="postorden">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="setRaiz1">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="obtenerFE">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="obtenerraizadmon">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="rotacionizqadmin">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="obtenerFEadmin">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="obtenernuevonodo">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Insertar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="insertarAVL1">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="elimnar_avl">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="rotacionizq">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="codigograp">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="obtenerraiz">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getRaiz">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="rotacionderadmin">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="rotaciondobleder">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="altura">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -456,7 +803,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="LoginEstacionclave">
+<operation name="graficar">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -483,7 +830,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="LoginEstaciongeneral">
+<operation name="LoginEstacionclave">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -501,160 +848,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="existeestacionclave">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="todoasadmin">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="altura">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="Inorden">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="elimnar_avl">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="obtenernuevonodo">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="rotacionder">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="rotaciondobleder">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="eliminar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="graficarEST">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="setRaiz">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="rotacionizq">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getRaiz1">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="preorden">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="balanciar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="obtenerraizadmon">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="codigograp">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="Insertar">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -672,7 +866,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="rotacionderadmin">
+<operation name="graficarEST">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -681,7 +875,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getRaiz">
+<operation name="LoginEstaciongeneral">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -690,7 +884,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="insertarAVL1">
+<operation name="InsertarEst">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -699,7 +893,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="obtenerraiz">
+<operation name="imprimir_listaestgen">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -708,7 +902,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="insertarAVL">
+<operation name="EliminarEstacionGeneral">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -717,106 +911,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="buscar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="obtenerFE">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="postorden">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="obtenerFEadmin">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="rotaciondobleizq">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="hello">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="setRaiz1">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="rotacionizqadmin">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="graficar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="rotaciondobleizqadmin">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="rotaciondoblederadmin">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="existeestacioncgeneral">
+<operation name="EliminarEstacionClave">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

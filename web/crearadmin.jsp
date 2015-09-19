@@ -24,7 +24,10 @@
 				<li><a href="Asignarbuses.jsp">Asignar buses</a></li>
                                 <li><a href="crearESTclave.jsp">Crear Estacion Clave</a></li>
 				<li><a href="CrearESTgeneral.jsp">Crear Estacion General</a></li>
-			</ul>
+                                <li><a href="eliminarestacionclave.jsp">Eliminar Estacion General</a></li>
+				<li><a href="eliminarestaciongeneral.jsp">Eliminar Estacion General</a></li>
+				
+                        </ul>
 		</div>
         <div id="logo">
 			<h1><a href="#"><span>Municipalidad de Guatemala</span></a></h1>

@@ -220,6 +220,7 @@ document.getElementById('datosruta').style.display ='block';
                 <label>Contraseña:<p><input type="text" name="txtpassadmin" class="input" /></label></p>
                 <input type="submit" value="Aceptar" />
                 <div style="clear:both">&nbsp;</div>
+                
 	</div>
           <div id="datosestcla" style="display:none;">
               <p>Estacion Clave</p>  
