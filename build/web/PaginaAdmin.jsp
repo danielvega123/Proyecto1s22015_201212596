@@ -271,21 +271,30 @@ document.getElementById('datosruta').style.display ='block';
      </div>
     
 </div>
-      <%-- start web service invocation --%><hr/>
+          <%-- start web service invocation --%><hr/>
     <%
-    try {
+        if(request.getParameter("txtcorreoadmin")!= null && request.getParameter("txtpassadmin")!=null){
+            try {
+        
 	estructuras.Estructuras_Service service = new estructuras.Estructuras_Service();
 	estructuras.Estructuras port = service.getEstructurasPort();
 	 // TODO initialize WS operation arguments here
-	java.lang.Integer d = Integer.valueOf(request.getParameter("txtidibus"));
+	java.lang.String c = String.valueOf(request.getParameter("txtcorreoadmin"));
+	java.lang.String c2 = String.valueOf(request.getParameter("txtpassadmin"));
 	// TODO process result here
-	int result = port.insertar(d);
+	java.lang.String result = port.insertaradmin(c, c2);
 	out.println("Result = "+result);
     } catch (Exception ex) {
 	// TODO handle custom exceptions here
     }
+            
+        }else{
+            out.println("llena todos los campos");
+        }
+    
     %>
-    <%-- end web service invocation --%><hr/>    
+    <%-- end web service invocation --%><hr/>
+
   
       
 </body>

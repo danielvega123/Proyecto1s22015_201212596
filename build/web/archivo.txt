@@ -1,6 +1,1 @@
-digraph A {"juande@gmial.com"->"danielvega@gmail.com"
-"danielvega@gmail.com"->"fish@yahoo.com"
-"juande@gmial.com"->"master"
-"master"->"julie@gmail.com"
-"master"->"miguel@gmail.com"
-}
+digraph A {}

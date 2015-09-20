@@ -28,6 +28,7 @@
 		                <li><a href="CrearESTgeneral.jsp">Crear Estacion General</a></li>
 				<li><a href="eliminarestacionclave.jsp">Eliminar estacion clave</a></li>
 				<li><a href="eliminarestaciongeneral.jsp">Eliminar Estacion General</a></li>
+				<li><a href="crearbus.jsp">Crear bus</a></li>
 				
 			</ul>
 		</div>

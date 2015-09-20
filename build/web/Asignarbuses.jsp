@@ -37,9 +37,41 @@
 			<p>Administrador</p>
 		</div>
             <form action="Asignarbuses.jsp" method="POST">
-                <input type="file" name="Archivo" value="" />
+                
+                  <%-- start web service invocation --%><hr/>
+ 
+
+    <%
+    try {
+	estructuras.Estructuras_Service service = new estructuras.Estructuras_Service();
+	estructuras.Estructuras port = service.getEstructurasPort();
+	// TODO process result here
+	java.util.List<java.lang.Object> result = port.imprimirListabuses();
+        int j = result.size();
+        int i;
+            
+    %>
+        <SELECT NAME="selCombo"> 
+  
+        
+       <% for (i=0; i<j; i++){
+           String corre = result.get(i).toString();
+       %> <option><%=corre%> </option><%
+           
+        }
+        
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    
+            </SELECT> 
             </form>
 	</div>
             </div>
+            <%-- start web service invocation --%><hr/>
+    
+
     </body>
 </html>

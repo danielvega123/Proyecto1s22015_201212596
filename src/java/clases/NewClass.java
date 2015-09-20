@@ -8,6 +8,7 @@ package clases;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +21,7 @@ public class NewClass {
      */
     public static void main(String[] args) {
        ListaBuses list = new ListaBuses();
+      ArrayList<Integer> arraybus = new ArrayList<Integer>();
        /**int opcion=0,elemento;
        /**do{
            try{
@@ -97,9 +99,26 @@ public class NewClass {
            }  
         
     }while(opcion!=7);**/
-       int a[] = {5,6,3,44,19,4,100,56,22,1};
+      
+      arraybus.add(5);
+      arraybus.add(6);
+      arraybus.add(3);
+      arraybus.add(44);
+      arraybus.add(19);
+      arraybus.add(4);
+      arraybus.add(100);
+      arraybus.add(56);
+      arraybus.add(22);
+      arraybus.add(1);
+      
+ int a []  = new int [arraybus.size()];
        
-       for(int i = 0; i < a.length;i++){
+ for(int i = 0; i < arraybus.size(); i++){
+     a[i] = arraybus.get(i);
+     
+ }
+       for(int i = 0; i < a.length; i++){
+           
            list.burbuja(a);
            list.agregarAlInicio(a[i]);
        }

@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://estructuras/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://estructuras/">
 
+<xs:element name="ArchivoCSV" type="tns:ArchivoCSV"/>
+
+<xs:element name="ArchivoCSVResponse" type="tns:ArchivoCSVResponse"/>
+
 <xs:element name="EliminarEstacionClave" type="tns:EliminarEstacionClave"/>
 
 <xs:element name="EliminarEstacionClaveResponse" type="tns:EliminarEstacionClaveResponse"/>
@@ -7,6 +11,8 @@
 <xs:element name="EliminarEstacionGeneral" type="tns:EliminarEstacionGeneral"/>
 
 <xs:element name="EliminarEstacionGeneralResponse" type="tns:EliminarEstacionGeneralResponse"/>
+
+<xs:element name="IOException" type="tns:IOException"/>
 
 <xs:element name="Inorden" type="tns:Inorden"/>
 
@@ -35,6 +41,10 @@
 <xs:element name="LoginEstaciongeneral" type="tns:LoginEstaciongeneral"/>
 
 <xs:element name="LoginEstaciongeneralResponse" type="tns:LoginEstaciongeneralResponse"/>
+
+<xs:element name="agregarbus" type="tns:agregarbus"/>
+
+<xs:element name="agregarbusResponse" type="tns:agregarbusResponse"/>
 
 <xs:element name="altura" type="tns:altura"/>
 
@@ -92,6 +102,10 @@
 
 <xs:element name="graficarResponse" type="tns:graficarResponse"/>
 
+<xs:element name="graficarbus" type="tns:graficarbus"/>
+
+<xs:element name="graficarbusResponse" type="tns:graficarbusResponse"/>
+
 <xs:element name="graficarcompleta" type="tns:graficarcompleta"/>
 
 <xs:element name="graficarcompletaResponse" type="tns:graficarcompletaResponse"/>
@@ -99,6 +113,10 @@
 <xs:element name="hello" type="tns:hello"/>
 
 <xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="imprimir_listabuses" type="tns:imprimir_listabuses"/>
+
+<xs:element name="imprimir_listabusesResponse" type="tns:imprimir_listabusesResponse"/>
 
 <xs:element name="imprimir_listadmin" type="tns:imprimir_listadmin"/>
 
@@ -192,6 +210,24 @@
 
 <xs:element name="todoasadminResponse" type="tns:todoasadminResponse"/>
 
+<xs:complexType name="ArchivoCSV">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ArchivoCSVResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IOException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="imprimir_listadmin">
 <xs:sequence/>
 </xs:complexType>
@@ -199,6 +235,254 @@
 <xs:complexType name="imprimir_listadminResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="graficarEST">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="graficarESTResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="insertarAVL1">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
+<xs:element name="arg1" type="tns:nodoadminitradorAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nodoadminitradorAVL">
+<xs:sequence>
+<xs:element name="hijoder" type="tns:nodoadminitradorAVL" minOccurs="0"/>
+<xs:element name="hijoizq" type="tns:nodoadminitradorAVL" minOccurs="0"/>
+<xs:element name="raiz" type="tns:nodoadminitradorAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarAVL1Response">
+<xs:sequence>
+<xs:element name="return" type="tns:nodoadminitradorAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imprimir_listaestcla">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="imprimir_listaestclaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rotaciondoblederadmin">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rotaciondoblederadminResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nodoadminitradorAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="preorden">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nodoArbolAVL">
+<xs:sequence>
+<xs:element name="hijoder" type="tns:nodoArbolAVL" minOccurs="0"/>
+<xs:element name="hijoizq" type="tns:nodoArbolAVL" minOccurs="0"/>
+<xs:element name="padre" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="preordenResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="buscar">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="altura">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="alturaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarAVL">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
+<xs:element name="arg1" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarAVLResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rotaciondobleizq">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rotaciondobleizqResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="todoasadmin">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="todoasadminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agregarbus">
+<xs:sequence>
+<xs:element name="numerobus" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agregarbusResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Inorden">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InordenResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="obtenernuevonodo">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenernuevonodoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rotacionder">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rotacionderResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="graficarESTGEN">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="graficarESTGENResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getRaiz">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getRaizResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerraizadmon">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="obtenerraizadmonResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nodoadminitradorAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarEstacionGeneral">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarEstacionGeneralResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="LoginEstaciongeneral">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginEstaciongeneralResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerFEadmin">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerFEadminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -211,26 +495,6 @@
 <xs:complexType name="existeestacioncgeneralResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="obtenerFEadmin">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="nodoadminitradorAVL">
-<xs:sequence>
-<xs:element name="hijoder" type="tns:nodoadminitradorAVL" minOccurs="0"/>
-<xs:element name="hijoizq" type="tns:nodoadminitradorAVL" minOccurs="0"/>
-<xs:element name="raiz" type="tns:nodoadminitradorAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="obtenerFEadminResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -256,27 +520,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="graficarEST">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="graficarESTResponse">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="insertarAVL1">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
-<xs:element name="arg1" type="tns:nodoadminitradorAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="insertarAVL1Response">
-<xs:sequence>
-<xs:element name="return" type="tns:nodoadminitradorAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="LoginEstacionclave">
 <xs:sequence>
 <xs:element name="id" type="xs:int"/>
@@ -288,24 +531,6 @@
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="postorden">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="nodoArbolAVL">
-<xs:sequence>
-<xs:element name="hijoder" type="tns:nodoArbolAVL" minOccurs="0"/>
-<xs:element name="hijoizq" type="tns:nodoArbolAVL" minOccurs="0"/>
-<xs:element name="padre" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="postordenResponse">
-<xs:sequence/>
 </xs:complexType>
 
 <xs:complexType name="InsertarEst">
@@ -322,14 +547,14 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="imprimir_listaestcla">
-<xs:sequence/>
+<xs:complexType name="postorden">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="imprimir_listaestclaResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
-</xs:sequence>
+<xs:complexType name="postordenResponse">
+<xs:sequence/>
 </xs:complexType>
 
 <xs:complexType name="setRaiz">
@@ -347,28 +572,6 @@
 </xs:complexType>
 
 <xs:complexType name="graficarResponse">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="rotaciondoblederadmin">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="rotaciondoblederadminResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:nodoadminitradorAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="preorden">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="preordenResponse">
 <xs:sequence/>
 </xs:complexType>
 
@@ -408,19 +611,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="buscar">
-<xs:sequence>
-<xs:element name="arg0" type="xs:int"/>
-<xs:element name="arg1" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="buscarResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="codigograp">
 <xs:sequence>
 <xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
@@ -430,30 +620,6 @@
 <xs:complexType name="codigograpResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="altura">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="alturaResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="existeestacionclave">
-<xs:sequence>
-<xs:element name="id" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="existeestacionclaveResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -469,16 +635,15 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="insertarAVL">
+<xs:complexType name="existeestacionclave">
 <xs:sequence>
-<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
-<xs:element name="arg1" type="tns:nodoArbolAVL" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="insertarAVLResponse">
+<xs:complexType name="existeestacionclaveResponse">
 <xs:sequence>
-<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -491,40 +656,6 @@
 
 <xs:complexType name="balanciarResponse">
 <xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="hello">
-<xs:sequence>
-<xs:element name="name" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="helloResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="rotaciondobleizq">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="rotaciondobleizqResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="todoasadmin">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="todoasadminResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
-</xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="EliminarEstacionClave">
@@ -562,25 +693,13 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="Inorden">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="InordenResponse">
+<xs:complexType name="imprimir_listabuses">
 <xs:sequence/>
 </xs:complexType>
 
-<xs:complexType name="obtenernuevonodo">
+<xs:complexType name="imprimir_listabusesResponse">
 <xs:sequence>
-<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="obtenernuevonodoResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -594,23 +713,11 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="rotacionder">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="rotacionderResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="graficarESTGEN">
+<xs:complexType name="graficarbus">
 <xs:sequence/>
 </xs:complexType>
 
-<xs:complexType name="graficarESTGENResponse">
+<xs:complexType name="graficarbusResponse">
 <xs:sequence/>
 </xs:complexType>
 
@@ -624,16 +731,6 @@
 <xs:sequence/>
 </xs:complexType>
 
-<xs:complexType name="getRaiz">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="getRaizResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="Insertaradmin">
 <xs:sequence>
 <xs:element name="c" type="xs:string" minOccurs="0"/>
@@ -644,16 +741,6 @@
 <xs:complexType name="InsertaradminResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="obtenerraizadmon">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="obtenerraizadmonResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:nodoadminitradorAVL" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -688,16 +775,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="EliminarEstacionGeneral">
-<xs:sequence>
-<xs:element name="id" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="EliminarEstacionGeneralResponse">
-<xs:sequence/>
-</xs:complexType>
-
 <xs:complexType name="rotacionizq">
 <xs:sequence>
 <xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
@@ -707,19 +784,6 @@
 <xs:complexType name="rotacionizqResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="LoginEstaciongeneral">
-<xs:sequence>
-<xs:element name="id" type="xs:int"/>
-<xs:element name="pass" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="LoginEstaciongeneralResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 

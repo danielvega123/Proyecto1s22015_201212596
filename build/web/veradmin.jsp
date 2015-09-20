@@ -121,5 +121,21 @@
     <%-- end web service invocation --%><hr/>
             </SELECT> 
         </form>
+    
+    <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructuras.Estructuras_Service service = new estructuras.Estructuras_Service();
+	estructuras.Estructuras port = service.getEstructurasPort();
+	port.graficarbus();
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+
+           
+
+
     </body>
 </html>

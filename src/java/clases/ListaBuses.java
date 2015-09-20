@@ -5,6 +5,7 @@
  */
 package clases;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -98,7 +99,6 @@ public class ListaBuses {
            
            
        }
-      
       public void burbuja(int [] arreglo){
         pasadas = 0;
         for(i=0;i<arreglo.length;i++){
