@@ -111,6 +111,29 @@
     %>
     <%-- end web service invocation --%><hr/>
 
+    <%-- start web service invocation --%><hr/>
+    <%
+        if(request.getParameter("nombrechofer")!=null && request.getParameter("passchofer")!=null){
+            try {
+	estructuras.Estructuras_Service service = new estructuras.Estructuras_Service();
+	estructuras.Estructuras port = service.getEstructurasPort();
+	 // TODO initialize WS operation arguments here
+	int id = Integer.parseInt(String.valueOf(request.getParameter("nombrechofer")));
+	java.lang.String pass1 = String.valueOf(request.getParameter("passchofer"));
+	// TODO process result here
+	boolean result2 = port.loginChofer(id, pass1);
+	if(result2==true){
+                response.sendRedirect("paginaadmin1.jsp");
+            }else{
+                response.sendRedirect("index.html");
+            }
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    } 
+        }
+   
+    %>
+    <%-- end web service invocation --%><hr/>
 
 
 

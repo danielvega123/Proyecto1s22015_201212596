@@ -28,7 +28,10 @@
 				<li><a href="CrearESTgeneral.jsp">Crear Estacion General</a></li>
                                 <li><a href="eliminarestacionclave.jsp">Eliminar Estacion Clave</a></li>
 				<li><a href="eliminarestaciongeneral.jsp">Eliminar Estacion General</a></li>
-				
+				<li><a href="eliminarchofer.jsp">Eliminar Chofer</a></li>
+                                 <li><a href="crearchofer.jsp">Crear Chofer</a></li>
+                                 <li><a href="crearbus.jsp">Crear Bus</a></li>
+                                
                         </ul>
 		</div>
 		<div id="logo">
@@ -134,7 +137,19 @@
     %>
     <%-- end web service invocation --%><hr/>
 
-           
+          <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructuras.Estructuras_Service service = new estructuras.Estructuras_Service();
+	estructuras.Estructuras port = service.getEstructurasPort();
+	port.graficarCHOFER();
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+    
+      <img src ="Choferes.jpg">
 
 
     </body>

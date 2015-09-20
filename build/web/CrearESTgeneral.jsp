@@ -30,7 +30,10 @@
 				<li><a href="CrearESTgeneral.jsp">Crear Estacion General</a></li>
                                 <li><a href="eliminarestacionclave.jsp">Eliminar Estacion Clave</a></li>
 				<li><a href="eliminarestaciongeneral.jsp">Eliminar Estacion General</a></li>
-				
+				<li><a href="eliminarchofer.jsp">Eliminar Chofer</a></li>
+                                 <li><a href="crearchofer.jsp">Crear Chofer</a></li>
+                                 <li><a href="crearbus.jsp">Crear Bus</a></li>
+                                
                         </ul>
 		</div>
 		<div id="logo">

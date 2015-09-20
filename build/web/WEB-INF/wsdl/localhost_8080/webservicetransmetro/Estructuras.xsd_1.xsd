@@ -12,6 +12,10 @@
 
 <xs:element name="EliminarEstacionGeneralResponse" type="tns:EliminarEstacionGeneralResponse"/>
 
+<xs:element name="Eliminarchofer" type="tns:Eliminarchofer"/>
+
+<xs:element name="EliminarchoferResponse" type="tns:EliminarchoferResponse"/>
+
 <xs:element name="IOException" type="tns:IOException"/>
 
 <xs:element name="Inorden" type="tns:Inorden"/>
@@ -33,6 +37,14 @@
 <xs:element name="Insertaradmin" type="tns:Insertaradmin"/>
 
 <xs:element name="InsertaradminResponse" type="tns:InsertaradminResponse"/>
+
+<xs:element name="Insertarchofer" type="tns:Insertarchofer"/>
+
+<xs:element name="InsertarchoferResponse" type="tns:InsertarchoferResponse"/>
+
+<xs:element name="LoginChofer" type="tns:LoginChofer"/>
+
+<xs:element name="LoginChoferResponse" type="tns:LoginChoferResponse"/>
 
 <xs:element name="LoginEstacionclave" type="tns:LoginEstacionclave"/>
 
@@ -74,6 +86,10 @@
 
 <xs:element name="elimnar_avlResponse" type="tns:elimnar_avlResponse"/>
 
+<xs:element name="existechofer" type="tns:existechofer"/>
+
+<xs:element name="existechoferResponse" type="tns:existechoferResponse"/>
+
 <xs:element name="existeestacioncgeneral" type="tns:existeestacioncgeneral"/>
 
 <xs:element name="existeestacioncgeneralResponse" type="tns:existeestacioncgeneralResponse"/>
@@ -91,6 +107,10 @@
 <xs:element name="getRaizResponse" type="tns:getRaizResponse"/>
 
 <xs:element name="graficar" type="tns:graficar"/>
+
+<xs:element name="graficarCHOFER" type="tns:graficarCHOFER"/>
+
+<xs:element name="graficarCHOFERResponse" type="tns:graficarCHOFERResponse"/>
 
 <xs:element name="graficarEST" type="tns:graficarEST"/>
 
@@ -117,6 +137,10 @@
 <xs:element name="imprimir_listabuses" type="tns:imprimir_listabuses"/>
 
 <xs:element name="imprimir_listabusesResponse" type="tns:imprimir_listabusesResponse"/>
+
+<xs:element name="imprimir_listachofer" type="tns:imprimir_listachofer"/>
+
+<xs:element name="imprimir_listachoferResponse" type="tns:imprimir_listachoferResponse"/>
 
 <xs:element name="imprimir_listadmin" type="tns:imprimir_listadmin"/>
 
@@ -277,6 +301,16 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="Eliminarchofer">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarchoferResponse">
+<xs:sequence/>
+</xs:complexType>
+
 <xs:complexType name="rotaciondoblederadmin">
 <xs:sequence>
 <xs:element name="arg0" type="tns:nodoadminitradorAVL" minOccurs="0"/>
@@ -307,6 +341,18 @@
 <xs:sequence/>
 </xs:complexType>
 
+<xs:complexType name="altura">
+<xs:sequence>
+<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="alturaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="buscar">
 <xs:sequence>
 <xs:element name="arg0" type="xs:int"/>
@@ -317,18 +363,6 @@
 <xs:complexType name="buscarResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="altura">
-<xs:sequence>
-<xs:element name="arg0" type="tns:nodoArbolAVL" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="alturaResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -354,6 +388,19 @@
 <xs:complexType name="helloResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginChofer">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginChoferResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -451,6 +498,18 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="existechofer">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="existechoferResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="EliminarEstacionGeneral">
 <xs:sequence>
 <xs:element name="id" type="xs:int"/>
@@ -520,6 +579,14 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="graficarCHOFER">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="graficarCHOFERResponse">
+<xs:sequence/>
+</xs:complexType>
+
 <xs:complexType name="LoginEstacionclave">
 <xs:sequence>
 <xs:element name="id" type="xs:int"/>
@@ -555,6 +622,19 @@
 
 <xs:complexType name="postordenResponse">
 <xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Insertarchofer">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="c2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InsertarchoferResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="setRaiz">
@@ -656,6 +736,16 @@
 
 <xs:complexType name="balanciarResponse">
 <xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="imprimir_listachofer">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="imprimir_listachoferResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="EliminarEstacionClave">
